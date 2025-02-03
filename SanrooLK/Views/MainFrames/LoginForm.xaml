@@ -237,28 +237,83 @@
                              Name="btn_Login"
                              Grid.Column="1"
                              Grid.Row="12">
-                        <Border Background="Black"
+                                            <Border Name="border_Login"
+                                Background="Black"
                                 BorderBrush="Black"
                                 BorderThickness="0"
                                 CornerRadius="10"
                                 Width="418"
                                 Height="50">
+                            <Border.RenderTransform>
+                                <ScaleTransform x:Name="scaleTransform" />
+                            </Border.RenderTransform>
+                            <Border.RenderTransformOrigin>
+                                <Point X="0.5" Y="0.5"/>
+                            </Border.RenderTransformOrigin>
+                            <Border.Triggers>
+                                <EventTrigger RoutedEvent="MouseEnter">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                        To="DarkRed" Duration="0:0:0.2"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
+                                         To="0.5" Duration="0:0:0.2"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                                <EventTrigger RoutedEvent="MouseLeave">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                        To="Black" Duration="0:0:0.2"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
+                                         To="0.2" Duration="0:0:0.2"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                                <EventTrigger RoutedEvent="PreviewMouseDown">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                            To="DarkRed" Duration="0:0:0.1"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
+                                                             To="25" Duration="0:0:0.1"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                                             To="0.95" Duration="0:0:0.1"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                                             To="0.95" Duration="0:0:0.1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                                <EventTrigger RoutedEvent="PreviewMouseUp">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                            To="DarkRed" Duration="0:0:0.1"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
+                                                             To="15" Duration="0:0:0.1"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                                             To="1" Duration="0:0:0.1"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                                             To="1" Duration="0:0:0.1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Border.Triggers>
                             <Border.Effect>
                                 <DropShadowEffect ShadowDepth="2"
                                                   BlurRadius="15"
                                                   Color="Gray"
-                                                  Opacity="20"/>
+                                                  Opacity="0.2"/>       
                             </Border.Effect>
+                            <Label Name="btn_LoginText"
+                                   Content="Login"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   FontFamily="Lucida Fax"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
                         </Border>
-                    </Viewbox>
-                    <Viewbox Stretch="Uniform"
-                             Grid.Column="1"
-                             Grid.Row="12">
-                        <Label Name="btn_LoginText"
-                               Content="Login"
-                               Foreground="White"
-                               FontSize="9"
-                               FontFamily="Lucida Fax"/>
                     </Viewbox>
 
 
