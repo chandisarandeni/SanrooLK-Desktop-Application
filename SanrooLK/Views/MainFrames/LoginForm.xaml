@@ -1,0 +1,232 @@
+﻿<UserControl x:Class="SanrooLK.Views.MainFrames.LoginForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SanrooLK.Views.MainFrames"
+             mc:Ignorable="d" 
+             MinWidth="864"
+             MinHeight="558"
+             MaxWidth="1728"
+             MaxHeight="1117"
+             Background="White">
+    <Grid>
+        <Viewbox Stretch="Uniform">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="209"></ColumnDefinition>
+                    <ColumnDefinition Width="697"></ColumnDefinition>
+                    <ColumnDefinition Width="96"></ColumnDefinition>
+                    <ColumnDefinition Width="101"></ColumnDefinition>
+                    <ColumnDefinition Width="519"></ColumnDefinition>
+                    <ColumnDefinition Width="106"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="240"></RowDefinition>
+                    <RowDefinition Height="79"></RowDefinition>
+                    <RowDefinition Height="266"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="59"></RowDefinition>
+                    <RowDefinition Height="126"></RowDefinition>
+                    <RowDefinition Height="247"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <!--Sanroo Main Image-->
+                <Viewbox Stretch="Uniform"
+                    Grid.Column="1"
+                    Grid.Row="2">
+                    <Image
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+                        <Image.Source>
+                            <BitmapImage UriSource="https://res.cloudinary.com/dwbw83rrr/image/upload/v1737500643/yulnav7tzmwaldnswvnz.png"/>
+                        </Image.Source>
+                    </Image>
+                </Viewbox>
+
+                <!--Sanroo Main Text-->
+                <Viewbox Stretch="Uniform"
+                     Grid.Column="1"
+                     Grid.Row="4">
+                    <Label
+                        Name="MainFrameText"
+                        Content="Sanroo Enterprises (PVT) LTD"
+                        FontSize="50"
+                        FontFamily="Lucida Fax"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                </Viewbox>
+
+                <!--Login Board-->
+                <Viewbox Stretch="Uniform"
+                         Grid.Column="4"
+                         Grid.Row="1"
+                         Grid.RowSpan="5">
+                    <Border Background="White"
+                            BorderBrush="Black"
+                            BorderThickness="0"
+                            CornerRadius="10"
+                            Width="519"
+                            Height="630">
+                        <Border.Effect>
+                            <DropShadowEffect
+                                ShadowDepth="3"
+                                BlurRadius="15"
+                                Color="Black"
+                                Opacity="10"/>
+                        </Border.Effect>
+                    </Border>
+                </Viewbox>
+
+                <!--Login Board-->
+                <Grid
+                    Grid.Column="4"
+                    Grid.Row="1"
+                    Grid.RowSpan="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="51"></ColumnDefinition>
+                        <ColumnDefinition Width="418"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="37"></RowDefinition>
+                        <RowDefinition Height="59"></RowDefinition>
+                        <RowDefinition Height="31"></RowDefinition>
+                        <RowDefinition Height="59"></RowDefinition>
+                        <RowDefinition Height="26"></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="23"></RowDefinition>
+                        <RowDefinition Height="26"></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="45"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="23"></RowDefinition>
+                        <RowDefinition Height="26"></RowDefinition>
+                        <RowDefinition Height="90"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <!--Login Board Content-->
+                    <Viewbox Grid.Column="1"
+                             Grid.Row="1">
+                        <Label Content="Login"
+                               FontSize="20"
+                               Foreground="Black"
+                               FontFamily="Lucida Fax"
+                               FontWeight="Bold"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"/>
+                    </Viewbox>
+                    <!--Horizontal Ruler-->
+                    <Viewbox Grid.Column="1"
+                             Grid.Row="2">
+                        <Border BorderThickness="0,0.5,0,0"
+                                BorderBrush="Black" 
+                                Width="140"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                RenderTransformOrigin="0.5,0.5"
+                                Height="10">
+                            <Border.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleY="-1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Border.RenderTransform>
+                        </Border>
+                    </Viewbox>
+                    
+                    <!--Username Section-->
+                    <Viewbox Grid.Column="1"
+                             Grid.Row="4"
+                             Grid.RowSpan="2">
+                        <Label Content="Username"
+                               FontSize="26"
+                               FontFamily="Lucida Fax"
+                               FontWeight="Bold"
+                               HorizontalContentAlignment="Left"
+                               Width="657"
+                               Margin="8"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1"
+                             Grid.Row="6">
+                        <Border Background="White"
+                                BorderBrush="Black"
+                                BorderThickness="0"
+                                CornerRadius="10"
+                                Width="418"
+                                Height="50">
+                            <Border.Effect>
+                                <DropShadowEffect 
+                                    ShadowDepth="2"
+                                    BlurRadius="12"
+                                    Color="Gray"
+                                    Opacity="20"/>
+                            </Border.Effect>
+                            <TextBox Name="txt_Username"
+                                     HorizontalAlignment="Center" 
+                                     VerticalAlignment="Center" 
+                                     Width="398" 
+                                     Height="40" 
+                                     Padding="0, 5, 0, 5"
+                                     Background="Transparent"
+                                     CaretBrush="#C1C1D2"
+                                     FontFamily="Lucida Fax"
+                                     FontSize="24"
+                                     Foreground="#000000"
+                                     VerticalContentAlignment="Center"
+                                     BorderThickness="0"/>
+                        </Border>
+                    </Viewbox>
+                    
+                    <!--Password Section-->
+                    <Viewbox Grid.Column="1"
+                             Grid.Row="8"
+                             Grid.RowSpan="2">
+                        <Label Content="Password"
+                               FontSize="26"
+                               FontFamily="Lucida Fax"
+                               FontWeight="Bold"
+                               HorizontalContentAlignment="Left"
+                               Width="657"
+                               Margin="8"></Label>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1"
+                             Grid.Row="10">
+                        <Border
+                            Background="White"
+                            BorderBrush="Black"
+                            BorderThickness="0"
+                            CornerRadius="10"
+                            Width="418"
+                            Height="50">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="2"
+                                                  BlurRadius="12"
+                                                  Color="Gray"
+                                                  Opacity="20"/>
+                            </Border.Effect>
+                            <PasswordBox Name="txt_Password"
+                                         HorizontalAlignment="Center"
+                                         VerticalAlignment="Center"
+                                         Width="398"
+                                         Height="40"
+                                         Padding="0, 5, 0,5"
+                                         Background="Transparent"
+                                         CaretBrush="#C1C1D2"
+                                         FontFamily="Lucida Fax"
+                                         FontSize="24"
+                                         Foreground="Black"
+                                         VerticalContentAlignment="Center"
+                                         BorderThickness="0">       
+                            </PasswordBox>
+                        </Border>
+                    </Viewbox>
+                </Grid>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</UserControl>
