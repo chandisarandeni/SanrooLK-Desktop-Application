@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:SanrooLK.Views.MainFrames"
              mc:Ignorable="d" 
              MinWidth="864"
-             MinHeight="558"
+             MinHeight="558.5"
              MaxWidth="1728"
              MaxHeight="1117"
              Background="White">
@@ -108,7 +108,8 @@
                         <RowDefinition Height="90"></RowDefinition>
                     </Grid.RowDefinitions>
                     <!--Login Board Content-->
-                    <Viewbox Grid.Column="1"
+                    <Viewbox Stretch="Uniform"
+                             Grid.Column="1"
                              Grid.Row="1">
                         <Label Content="Login"
                                FontSize="20"
@@ -119,7 +120,8 @@
                                HorizontalAlignment="Center"/>
                     </Viewbox>
                     <!--Horizontal Ruler-->
-                    <Viewbox Grid.Column="1"
+                    <Viewbox Stretch="Uniform"
+                             Grid.Column="1"
                              Grid.Row="2">
                         <Border BorderThickness="0,0.5,0,0"
                                 BorderBrush="Black" 
@@ -138,9 +140,10 @@
                             </Border.RenderTransform>
                         </Border>
                     </Viewbox>
-                    
+
                     <!--Username Section-->
-                    <Viewbox Grid.Column="1"
+                    <Viewbox Stretch="Uniform"
+                             Grid.Column="1"
                              Grid.Row="4"
                              Grid.RowSpan="2">
                         <Label Content="Username"
@@ -151,7 +154,8 @@
                                Width="657"
                                Margin="8"/>
                     </Viewbox>
-                    <Viewbox Grid.Column="1"
+                    <Viewbox Stretch="Uniform"
+                             Grid.Column="1"
                              Grid.Row="6">
                         <Border Background="White"
                                 BorderBrush="Black"
@@ -181,9 +185,10 @@
                                      BorderThickness="0"/>
                         </Border>
                     </Viewbox>
-                    
+
                     <!--Password Section-->
-                    <Viewbox Grid.Column="1"
+                    <Viewbox Stretch="Uniform"
+                             Grid.Column="1"
                              Grid.Row="8"
                              Grid.RowSpan="2">
                         <Label Content="Password"
@@ -194,7 +199,8 @@
                                Width="657"
                                Margin="8"></Label>
                     </Viewbox>
-                    <Viewbox Grid.Column="1"
+                    <Viewbox Stretch="Uniform"
+                             Grid.Column="1"
                              Grid.Row="10">
                         <Border
                             Background="White"
@@ -221,9 +227,101 @@
                                          FontSize="24"
                                          Foreground="Black"
                                          VerticalContentAlignment="Center"
-                                         BorderThickness="0">       
+                                         BorderThickness="0">
                             </PasswordBox>
                         </Border>
+                    </Viewbox>
+
+                    <!--Login Button-->
+                    <Viewbox Stretch="Uniform"
+                             Name="btn_Login"
+                             Grid.Column="1"
+                             Grid.Row="12">
+                        <Border Background="Black"
+                                BorderBrush="Black"
+                                BorderThickness="0"
+                                CornerRadius="10"
+                                Width="418"
+                                Height="50">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="2"
+                                                  BlurRadius="15"
+                                                  Color="Gray"
+                                                  Opacity="20"/>
+                            </Border.Effect>
+                        </Border>
+                    </Viewbox>
+                    <Viewbox Stretch="Uniform"
+                             Grid.Column="1"
+                             Grid.Row="12">
+                        <Label Name="btn_LoginText"
+                               Content="Login"
+                               Foreground="White"
+                               FontSize="9"
+                               FontFamily="Lucida Fax"/>
+                    </Viewbox>
+
+
+                    <!--Forgot Password Section-->
+                    <Grid Grid.Column="1"
+                          Grid.Row="14">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="38"></ColumnDefinition>
+                            <ColumnDefinition Width="197"></ColumnDefinition>
+                            <ColumnDefinition Width="1.2"></ColumnDefinition>
+                            <ColumnDefinition Width="5.8"/>
+                            <ColumnDefinition Width="137"></ColumnDefinition>
+                            <ColumnDefinition Width="39"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Viewbox Stretch="Uniform"
+                                 Grid.Column="1"
+                                 Grid.Row="0">
+                            <Label Content="Forgot Password?"
+                                   FontSize="27"
+                                   FontFamily="Lucida Fax"
+                                   FontWeight="Black"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center" 
+                                   Width="264"/>
+                        </Viewbox>
+                        <Viewbox Stretch="Uniform"
+                                 Grid.Column="4"
+                                 Grid.Row="0">
+                            <Label Name="btn_ForgotPassword"
+                                   Content="Click Here"
+                                   FontSize="27"
+                                   FontFamily="Lucida Fax"
+                                   FontWeight="Bold"
+                                   Foreground="Blue" Width="202"
+                                   Margin="0"
+                                   Cursor="Hand"/>
+                        </Viewbox>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="4"
+                      Grid.Row="6"
+                      Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="489"></ColumnDefinition>
+                        <ColumnDefinition Width="122"></ColumnDefinition>
+                        <ColumnDefinition Width="14"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="195"></RowDefinition>
+                        <RowDefinition Height="26"></RowDefinition>
+                        <RowDefinition Height="26"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Viewbox Stretch="Uniform"
+                             Grid.Column="1"
+                             Grid.Row="1">
+                        <Label Name="btn_getHelp"
+                               Content="Get help?"
+                               FontFamily="Lucida Fax"
+                               FontSize="40"
+                               FontWeight="Bold"
+                               Foreground="Blue"
+                               Width="213"
+                               Cursor="Hand"/>
                     </Viewbox>
                 </Grid>
             </Grid>

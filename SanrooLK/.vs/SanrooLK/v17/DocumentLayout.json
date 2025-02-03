@@ -1,12 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|c:\\users\\chand\\onedrive\\desktop\\github clones\\sanroolk-desktop-application\\sanroolk\\views\\mainframes\\loginform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|solutionrelative:views\\mainframes\\loginform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginForm.xaml",
+              "DocumentMoniker": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\MainFrames\\LoginForm.xaml",
+              "RelativeDocumentMoniker": "Views\\MainFrames\\LoginForm.xaml",
+              "ToolTip": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\MainFrames\\LoginForm.xaml",
+              "RelativeToolTip": "Views\\MainFrames\\LoginForm.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-03T05:01:34.012Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
