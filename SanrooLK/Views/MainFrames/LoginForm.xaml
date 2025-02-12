@@ -7,8 +7,6 @@
              mc:Ignorable="d" 
              MinWidth="864"
              MinHeight="558.5"
-             MaxWidth="1728"
-             MaxHeight="1117"
              Background="White">
     <Grid>
         <Viewbox Stretch="Uniform">

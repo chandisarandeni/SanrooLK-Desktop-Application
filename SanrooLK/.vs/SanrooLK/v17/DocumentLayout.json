@@ -1,119 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|c:\\users\\chand\\onedrive\\desktop\\github clones\\sanroolk-desktop-application\\sanroolk\\views\\mainframes\\loginform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|solutionrelative:views\\mainframes\\loginform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|c:\\users\\chand\\onedrive\\desktop\\github clones\\sanroolk-desktop-application\\sanroolk\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|c:\\users\\chand\\onedrive\\desktop\\github clones\\sanroolk-desktop-application\\sanroolk\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|c:\\users\\chand\\onedrive\\desktop\\github clones\\sanroolk-desktop-application\\sanroolk\\views\\mainframes\\forgotpassword.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|solutionrelative:views\\mainframes\\forgotpassword.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|c:\\users\\chand\\onedrive\\desktop\\github clones\\sanroolk-desktop-application\\sanroolk\\views\\mainframes\\forgotpassword.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|solutionrelative:views\\mainframes\\forgotpassword.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|c:\\users\\chand\\onedrive\\desktop\\github clones\\sanroolk-desktop-application\\sanroolk\\views\\mainframes\\loginform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|solutionrelative:views\\mainframes\\loginform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedHeight": 200,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T11:55:22.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-03T11:55:19.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginForm.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\MainFrames\\LoginForm.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\MainFrames\\LoginForm.xaml.cs",
-              "ToolTip": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\MainFrames\\LoginForm.xaml.cs",
-              "RelativeToolTip": "Views\\MainFrames\\LoginForm.xaml.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAABgAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T11:11:53.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginForm.xaml",
-              "DocumentMoniker": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\MainFrames\\LoginForm.xaml",
-              "RelativeDocumentMoniker": "Views\\MainFrames\\LoginForm.xaml",
-              "ToolTip": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\MainFrames\\LoginForm.xaml",
-              "RelativeToolTip": "Views\\MainFrames\\LoginForm.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-03T11:11:48.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ForgotPassword.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\MainFrames\\ForgotPassword.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\MainFrames\\ForgotPassword.xaml.cs",
-              "ToolTip": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\MainFrames\\ForgotPassword.xaml.cs",
-              "RelativeToolTip": "Views\\MainFrames\\ForgotPassword.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T11:11:30.422Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ForgotPassword.xaml",
-              "DocumentMoniker": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\MainFrames\\ForgotPassword.xaml",
-              "RelativeDocumentMoniker": "Views\\MainFrames\\ForgotPassword.xaml",
-              "ToolTip": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\MainFrames\\ForgotPassword.xaml",
-              "RelativeToolTip": "Views\\MainFrames\\ForgotPassword.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-03T11:11:22.692Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
