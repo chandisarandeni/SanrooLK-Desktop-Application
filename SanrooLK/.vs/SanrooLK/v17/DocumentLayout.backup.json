@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|c:\\users\\chand\\onedrive\\desktop\\github clones\\sanroolk-desktop-application\\sanroolk\\views\\mainframes\\loginform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|solutionrelative:views\\mainframes\\loginform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|c:\\users\\chand\\onedrive\\desktop\\github clones\\sanroolk-desktop-application\\sanroolk\\views\\adminoperations\\common\\menubar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|solutionrelative:views\\adminoperations\\common\\menubar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,13 +19,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginForm.xaml",
-              "DocumentMoniker": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\MainFrames\\LoginForm.xaml",
-              "RelativeDocumentMoniker": "Views\\MainFrames\\LoginForm.xaml",
-              "ToolTip": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\MainFrames\\LoginForm.xaml",
-              "RelativeToolTip": "Views\\MainFrames\\LoginForm.xaml",
+              "Title": "MenuBar.xaml",
+              "DocumentMoniker": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\AdminOperations\\Common\\MenuBar.xaml",
+              "RelativeDocumentMoniker": "Views\\AdminOperations\\Common\\MenuBar.xaml",
+              "ToolTip": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\AdminOperations\\Common\\MenuBar.xaml",
+              "RelativeToolTip": "Views\\AdminOperations\\Common\\MenuBar.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-12T17:47:36.282Z",
+              "WhenOpened": "2025-02-13T04:57:31.472Z",
               "EditorCaption": ""
             }
           ]
