@@ -241,7 +241,9 @@
                                 BorderThickness="0"
                                 CornerRadius="10"
                                 Width="418"
-                                Height="50">
+                                Height="50"
+                                MouseDown="Login_MouseDown"
+                               >
                             <Border.RenderTransform>
                                 <ScaleTransform x:Name="scaleTransform" />
                             </Border.RenderTransform>

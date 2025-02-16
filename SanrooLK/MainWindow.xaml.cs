@@ -32,6 +32,14 @@ namespace SanrooLK
             this.Content = LoginForm;
         }
 
+        public void SwitchView(UserControl newView) {
+            if (this.Content is UserControl oldView && oldView is IDisposable disposable) { 
+                disposable.Dispose();
+            }
+            this.Content = null;
+            this.Content = newView;
+        }
+
         private void Window_KeyDown(object sender, KeyEventArgs e) {
             if (e.Key == Key.F11)
             {

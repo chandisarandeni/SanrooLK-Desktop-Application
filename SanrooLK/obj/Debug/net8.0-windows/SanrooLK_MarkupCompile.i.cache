@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\App.xaml
-4-94159769
+611619038
 
-9-274796956
+11-1007147934
 1981124507420
-MainWindow.xaml;Views\AdminOperations\Common\MenuBar.xaml;Views\MainFrames\ForgotPassword.xaml;Views\MainFrames\LoginForm.xaml;
+MainWindow.xaml;Views\AdminOperations\Common\MenuBar.xaml;Views\AdminOperations\Views\AdminDashboard.xaml;Views\AdminOperations\Views\AdminViewEmployee.xaml;Views\MainFrames\ForgotPassword.xaml;Views\MainFrames\LoginForm.xaml;
 
-False
+True
 

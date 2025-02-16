@@ -16,6 +16,7 @@
             <ColumnDefinition Width="232"></ColumnDefinition>
             <ColumnDefinition Width="21"></ColumnDefinition>
             <ColumnDefinition Width="21"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="61"></RowDefinition>
@@ -70,23 +71,24 @@
               Grid.Row="5"
               Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="24"></ColumnDefinition>
-                <ColumnDefinition Width="39"></ColumnDefinition>
-                <ColumnDefinition Width="33"></ColumnDefinition>
-                <ColumnDefinition Width="150"></ColumnDefinition>
-                <ColumnDefinition Width="126"></ColumnDefinition>
+                <ColumnDefinition Width="24"/>
+                <ColumnDefinition Width="39"/>
+                <ColumnDefinition Width="33"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="126"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="11"></RowDefinition>
-                <RowDefinition Height="39"></RowDefinition>
-                <RowDefinition Height="11"></RowDefinition>
+                <RowDefinition Height="11"/>
+                <RowDefinition Height="39"/>
+                <RowDefinition Height="11"/>
             </Grid.RowDefinitions>
 
             <Viewbox Stretch="Uniform"
                      Grid.Column="0"
                      Grid.ColumnSpan="5"
                      Grid.Row="0"
-                     Grid.RowSpan="3">
+                     Grid.RowSpan="3">  
+                <!--Change the properties when it is copied-->
                 <Border Name="btn_adminDashboard"
                         Background="Black"
                         BorderBrush="Black"
@@ -95,7 +97,8 @@
                         Width="372"
                         Height="61">
                     <Border.RenderTransform>
-                        <ScaleTransform x:Name="scaleTransform" />
+                        <!--Change the properties when it is copied-->
+                        <ScaleTransform x:Name="scaleTransform-for-adminDashboard" />
                     </Border.RenderTransform>
                     <Border.RenderTransformOrigin>
                         <Point X="0.5" Y="0.5"/>
@@ -105,9 +108,7 @@
                             <BeginStoryboard>
                                 <Storyboard>
                                     <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                        To="DarkRed" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                                         To="0.5" Duration="0:0:0.2"/>
+                                                    To="DarkRed" Duration="0:0:0.2"/> <!--Color change Mouse Hover-->
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
@@ -115,9 +116,7 @@
                             <BeginStoryboard>
                                 <Storyboard>
                                     <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                        To="Black" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                                         To="0.2" Duration="0:0:0.2"/>
+                                                    To="Black" Duration="0:0:0.2"/> <!--Color change Mouse Leave-->
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
@@ -125,13 +124,11 @@
                             <BeginStoryboard>
                                 <Storyboard>
                                     <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                        To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                                         To="25" Duration="0:0:0.1"/>
+                                                    To="DarkRed" Duration="0:0:0.1"/> <!--Color change Mouse Click-->
                                     <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                         To="0.95" Duration="0:0:0.1"/>
+                                                     To="0.95" Duration="0:0:0.1"/>
                                     <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                         To="0.95" Duration="0:0:0.1"/>
+                                                     To="0.95" Duration="0:0:0.1"/>
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
@@ -139,820 +136,51 @@
                             <BeginStoryboard>
                                 <Storyboard>
                                     <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                        To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                                         To="15" Duration="0:0:0.1"/>
+                                                    To="DarkRed" Duration="0:0:0.1"/> <!--Color change Mouse Release-->
                                     <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                         To="1" Duration="0:0:0.1"/>
+                                                     To="1" Duration="0:0:0.1"/>
                                     <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                         To="1" Duration="0:0:0.1"/>
+                                                     To="1" Duration="0:0:0.1"/>
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
                     </Border.Triggers>
                     <Border.Effect>
+                        <!--Change the blur rad when it is in normal button format (rad into 10)-->
                         <DropShadowEffect ShadowDepth="2"
                                           BlurRadius="15"
                                           Color="Gray"
                                           Opacity="0.2"/>
                     </Border.Effect>
-                    <Label Grid.Column="2"
-                           Grid.Row="1"
-                           Content="Dashboard"
-                           Foreground="White"
-                           FontSize="20"
-                           FontFamily="Lucida Fax"
-                           FontWeight="Bold"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center" Margin="96,0,0,0"/>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    
+                        <!--Change the icon regarding to button-->
+                        <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1739677595/material-symbols--dashboard-rounded_1_hrnsup.png"
+                               Width="39"
+                               Height="39"
+                               Margin="23,0,0,0"
+                               VerticalAlignment="Center"/>
+
+                        <!--Change the text regarding to figma design-->
+                        <Label Grid.Column="1"
+                               Content="Dashboard"
+                               Foreground="White"
+                               FontSize="20"
+                               FontFamily="Lucida Fax"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center" 
+                               Margin="27,0,0,0"/>
+                    </Grid>
                 </Border>
             </Viewbox>
-            <Viewbox Stretch="Uniform"
-                     Grid.Column="1"
-                     Grid.Row="1">
-                <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1737500643/yulnav7tzmwaldnswvnz.png"
-                       Width="39"
-                       Height="39"/>
-            </Viewbox>
         </Grid>
-
-
-        <!--Employee Button-->
-        <Grid Grid.Column="1"
-              Grid.Row="7"
-              Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="24"></ColumnDefinition>
-                <ColumnDefinition Width="39"></ColumnDefinition>
-                <ColumnDefinition Width="33"></ColumnDefinition>
-                <ColumnDefinition Width="150"></ColumnDefinition>
-                <ColumnDefinition Width="126"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="11"></RowDefinition>
-                <RowDefinition Height="39"></RowDefinition>
-                <RowDefinition Height="11"></RowDefinition>
-            </Grid.RowDefinitions>
-
-            <Viewbox Stretch="Uniform"
-                     Grid.Column="0"
-                     Grid.ColumnSpan="5"
-                     Grid.Row="0"
-                     Grid.RowSpan="3">
-                <Border Name="btn_adminViewEmployee"
-                        Background="Black"
-                        BorderBrush="Black"
-                        BorderThickness="0"
-                        CornerRadius="10"
-                        Width="372"
-                        Height="61">
-                    <Border.RenderTransform>
-                        <ScaleTransform x:Name="scaleTransformEmployee" />
-                    </Border.RenderTransform>
-                    <Border.RenderTransformOrigin>
-                        <Point X="0.5" Y="0.5"/>
-                    </Border.RenderTransformOrigin>
-                    <Border.Triggers>
-                        <EventTrigger RoutedEvent="MouseEnter">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                            To="DarkRed" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                             To="0.5" Duration="0:0:0.2"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="MouseLeave">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                            To="Black" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                             To="0.2" Duration="0:0:0.2"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="PreviewMouseDown">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                            To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                             To="25" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                             To="0.95" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                             To="0.95" Duration="0:0:0.1"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="PreviewMouseUp">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                            To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                             To="15" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                             To="1" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                             To="1" Duration="0:0:0.1"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </Border.Triggers>
-                    <Border.Effect>
-                        <DropShadowEffect ShadowDepth="2"
-                              BlurRadius="15"
-                              Color="Gray"
-                              Opacity="0.2"/>
-                    </Border.Effect>
-                    <Label Grid.Column="2"
-                           Grid.Row="1"
-                           Content="Employee"
-                           Foreground="White"
-                           FontSize="20"
-                           FontFamily="Lucida Fax"
-                           FontWeight="Bold"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center" Margin="96,0,0,0"/>
-                </Border>
-            </Viewbox>
-            <Viewbox Stretch="Uniform"
-                     Grid.Column="1"
-                     Grid.Row="1">
-                <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1737500643/yulnav7tzmwaldnswvnz.png"
-                       Width="39"
-                       Height="39"/>
-            </Viewbox>
-        </Grid>
-
-
-        <!--Customer Button-->
-        <Grid Grid.Column="1"
-              Grid.Row="9"
-              Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="24"></ColumnDefinition>
-                <ColumnDefinition Width="39"></ColumnDefinition>
-                <ColumnDefinition Width="33"></ColumnDefinition>
-                <ColumnDefinition Width="150"></ColumnDefinition>
-                <ColumnDefinition Width="126"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="11"></RowDefinition>
-                <RowDefinition Height="39"></RowDefinition>
-                <RowDefinition Height="11"></RowDefinition>
-            </Grid.RowDefinitions>
-
-            <Viewbox Stretch="Uniform"
-                     Grid.Column="0"
-                     Grid.ColumnSpan="5"
-                     Grid.Row="0"
-                     Grid.RowSpan="3">
-                <Border Name="btn_adminVIewCustomer"
-                        Background="Black"
-                        BorderBrush="Black"
-                        BorderThickness="0"
-                        CornerRadius="10"
-                        Width="372"
-                        Height="61">
-                    <Border.RenderTransform>
-                        <ScaleTransform x:Name="scaleTransformCustomer" />
-                    </Border.RenderTransform>
-                    <Border.RenderTransformOrigin>
-                        <Point X="0.5" Y="0.5"/>
-                    </Border.RenderTransformOrigin>
-                    <Border.Triggers>
-                        <EventTrigger RoutedEvent="MouseEnter">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="DarkRed" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                                                     To="0.5" Duration="0:0:0.2"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="MouseLeave">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="Black" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                                                     To="0.2" Duration="0:0:0.2"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="PreviewMouseDown">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                                                     To="25" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                                     To="0.95" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                                     To="0.95" Duration="0:0:0.1"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="PreviewMouseUp">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                                                     To="15" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                                     To="1" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                                     To="1" Duration="0:0:0.1"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </Border.Triggers>
-                    <Border.Effect>
-                        <DropShadowEffect ShadowDepth="2"
-                                          BlurRadius="15"
-                                          Color="Gray"
-                                          Opacity="0.2"/>
-                    </Border.Effect>
-                    <Label Grid.Column="2"
-                           Grid.Row="1"
-                           Content="Customer"
-                           Foreground="White"
-                           FontSize="20"
-                           FontFamily="Lucida Fax"
-                           FontWeight="Bold"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center" Margin="96,0,0,0"/>
-                </Border>
-            </Viewbox>
-            <Viewbox Stretch="Uniform"
-                     Grid.Column="1"
-                     Grid.Row="1">
-                <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1737500643/yulnav7tzmwaldnswvnz.png"
-                       Width="39"
-                       Height="39"/>
-            </Viewbox>
-        </Grid>
-
-        <!--Product Button-->
-        <Grid Grid.Column="1"
-              Grid.Row="11"
-              Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="24"></ColumnDefinition>
-                <ColumnDefinition Width="39"></ColumnDefinition>
-                <ColumnDefinition Width="33"></ColumnDefinition>
-                <ColumnDefinition Width="150"></ColumnDefinition>
-                <ColumnDefinition Width="126"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="11"></RowDefinition>
-                <RowDefinition Height="39"></RowDefinition>
-                <RowDefinition Height="11"></RowDefinition>
-            </Grid.RowDefinitions>
-
-            <Viewbox Stretch="Uniform"
-                     Grid.Column="0"
-                     Grid.ColumnSpan="5"
-                     Grid.Row="0"
-                     Grid.RowSpan="3">
-                <Border Name="btn_adminViewProduct"
-                        Background="Black"
-                        BorderBrush="Black"
-                        BorderThickness="0"
-                        CornerRadius="10"
-                        Width="372"
-                        Height="61">
-                    <Border.RenderTransform>
-                        <ScaleTransform x:Name="scaleTransformProduct" />
-                    </Border.RenderTransform>
-                    <Border.RenderTransformOrigin>
-                        <Point X="0.5" Y="0.5"/>
-                    </Border.RenderTransformOrigin>
-                    <Border.Triggers>
-                        <EventTrigger RoutedEvent="MouseEnter">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="DarkRed" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                                                     To="0.5" Duration="0:0:0.2"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="MouseLeave">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="Black" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                                                     To="0.2" Duration="0:0:0.2"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="PreviewMouseDown">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                                                     To="25" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                                     To="0.95" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                                     To="0.95" Duration="0:0:0.1"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="PreviewMouseUp">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                                                     To="15" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                                     To="1" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                                     To="1" Duration="0:0:0.1"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </Border.Triggers>
-                    <Border.Effect>
-                        <DropShadowEffect ShadowDepth="2"
-                                          BlurRadius="15"
-                                          Color="Gray"
-                                          Opacity="0.2"/>
-                    </Border.Effect>
-                    <Label Grid.Column="2"
-                           Grid.Row="1"
-                           Content="Product"
-                           Foreground="White"
-                           FontSize="20"
-                           FontFamily="Lucida Fax"
-                           FontWeight="Bold"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center" Margin="96,0,0,0"/>
-                </Border>
-            </Viewbox>
-            <Viewbox Stretch="Uniform"
-                     Grid.Column="1"
-                     Grid.Row="1">
-                <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1737500643/yulnav7tzmwaldnswvnz.png"
-                       Width="39"
-                       Height="39"/>
-            </Viewbox>
-        </Grid>
-
-        <!--Sales-->
-        <Grid Grid.Column="1"
-              Grid.Row="13"
-              Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="24"></ColumnDefinition>
-                <ColumnDefinition Width="39"></ColumnDefinition>
-                <ColumnDefinition Width="33"></ColumnDefinition>
-                <ColumnDefinition Width="150"></ColumnDefinition>
-                <ColumnDefinition Width="126"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="11"></RowDefinition>
-                <RowDefinition Height="39"></RowDefinition>
-                <RowDefinition Height="11"></RowDefinition>
-            </Grid.RowDefinitions>
-
-            <Viewbox Stretch="Uniform"
-                     Grid.Column="0"
-                     Grid.ColumnSpan="5"
-                     Grid.Row="0"
-                     Grid.RowSpan="3">
-                <Border Name="btn_adminViewSales"
-                        Background="Black"
-                        BorderBrush="Black"
-                        BorderThickness="0"
-                        CornerRadius="10"
-                        Width="372"
-                        Height="61">
-                    <Border.RenderTransform>
-                        <ScaleTransform x:Name="scaleTransformSales" />
-                    </Border.RenderTransform>
-                    <Border.RenderTransformOrigin>
-                        <Point X="0.5" Y="0.5"/>
-                    </Border.RenderTransformOrigin>
-                    <Border.Triggers>
-                        <EventTrigger RoutedEvent="MouseEnter">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                        To="DarkRed" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                                         To="0.5" Duration="0:0:0.2"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="MouseLeave">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                        To="Black" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                                         To="0.2" Duration="0:0:0.2"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="PreviewMouseDown">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                        To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                                         To="25" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                         To="0.95" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                         To="0.95" Duration="0:0:0.1"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="PreviewMouseUp">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                        To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                                         To="15" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                         To="1" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                         To="1" Duration="0:0:0.1"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </Border.Triggers>
-                    <Border.Effect>
-                        <DropShadowEffect ShadowDepth="2"
-                                          BlurRadius="15"
-                                          Color="Gray"
-                                          Opacity="0.2"/>
-                    </Border.Effect>
-                    <Label Grid.Column="2"
-                           Grid.Row="1"
-                           Content="Sales"
-                           Foreground="White"
-                           FontSize="20"
-                           FontFamily="Lucida Fax"
-                           FontWeight="Bold"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center" Margin="96,0,0,0"/>
-                </Border>
-            </Viewbox>
-            <Viewbox Stretch="Uniform"
-                     Grid.Column="1"
-                     Grid.Row="1">
-                <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1737500643/yulnav7tzmwaldnswvnz.png"
-                       Width="39"
-                       Height="39"/>
-            </Viewbox>
-        </Grid>
-
-        <!--Customer Service Button-->
-        <Grid Grid.Column="1"
-              Grid.Row="15"
-              Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="24"></ColumnDefinition>
-                <ColumnDefinition Width="39"></ColumnDefinition>
-                <ColumnDefinition Width="33"></ColumnDefinition>
-                <ColumnDefinition Width="150"></ColumnDefinition>
-                <ColumnDefinition Width="126"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="11"></RowDefinition>
-                <RowDefinition Height="39"></RowDefinition>
-                <RowDefinition Height="11"></RowDefinition>
-            </Grid.RowDefinitions>
-
-            <Viewbox Stretch="Uniform"
-                     Grid.Column="0"
-                     Grid.ColumnSpan="5"
-                     Grid.Row="0"
-                     Grid.RowSpan="3">
-                <Border Name="btn_adminViewCustomerService"
-                        Background="Black"
-                        BorderBrush="Black"
-                        BorderThickness="0"
-                        CornerRadius="10"
-                        Width="372"
-                        Height="61">
-                    <Border.RenderTransform>
-                        <ScaleTransform x:Name="scaleTransformCustomerService" />
-                    </Border.RenderTransform>
-                    <Border.RenderTransformOrigin>
-                        <Point X="0.5" Y="0.5"/>
-                    </Border.RenderTransformOrigin>
-                    <Border.Triggers>
-                        <EventTrigger RoutedEvent="MouseEnter">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="DarkRed" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                                                     To="0.5" Duration="0:0:0.2"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="MouseLeave">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="Black" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                                                     To="0.2" Duration="0:0:0.2"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="PreviewMouseDown">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                                                     To="25" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                                     To="0.95" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                                     To="0.95" Duration="0:0:0.1"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="PreviewMouseUp">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                                                     To="15" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                                     To="1" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                                     To="1" Duration="0:0:0.1"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </Border.Triggers>
-                    <Border.Effect>
-                        <DropShadowEffect ShadowDepth="2"
-                              BlurRadius="15"
-                              Color="Gray"
-                              Opacity="0.2"/>
-                    </Border.Effect>
-                    <Label Grid.Column="2"
-                           Grid.Row="1"
-                           Content="Customer Service"
-                           Foreground="White"
-                           FontSize="20"
-                           FontFamily="Lucida Fax"
-                           FontWeight="Bold"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center" Margin="96,0,0,0"/>
-                </Border>
-            </Viewbox>
-            <Viewbox Stretch="Uniform"
-                     Grid.Column="1"
-                     Grid.Row="1">
-                <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1737500643/yulnav7tzmwaldnswvnz.png"
-                       Width="39"
-                       Height="39"/>
-            </Viewbox>
-        </Grid>
-
-        <!--Maintenance-->
-        <Grid Grid.Column="1"
-              Grid.Row="17"
-              Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="24"></ColumnDefinition>
-                <ColumnDefinition Width="39"></ColumnDefinition>
-                <ColumnDefinition Width="33"></ColumnDefinition>
-                <ColumnDefinition Width="150"></ColumnDefinition>
-                <ColumnDefinition Width="126"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="11"></RowDefinition>
-                <RowDefinition Height="39"></RowDefinition>
-                <RowDefinition Height="11"></RowDefinition>
-            </Grid.RowDefinitions>
-
-            <Viewbox Stretch="Uniform"
-                     Grid.Column="0"
-                     Grid.ColumnSpan="5"
-                     Grid.Row="0"
-                     Grid.RowSpan="3">
-                <Border Name="btn_adminViewMaintenance"
-            Background="Black"
-            BorderBrush="Black"
-            BorderThickness="0"
-            CornerRadius="10"
-            Width="372"
-            Height="61">
-                    <Border.RenderTransform>
-                        <ScaleTransform x:Name="scaleTransformMaintenance" />
-                    </Border.RenderTransform>
-                    <Border.RenderTransformOrigin>
-                        <Point X="0.5" Y="0.5"/>
-                    </Border.RenderTransformOrigin>
-                    <Border.Triggers>
-                        <EventTrigger RoutedEvent="MouseEnter">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                            To="DarkRed" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                             To="0.5" Duration="0:0:0.2"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="MouseLeave">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                            To="Black" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                             To="0.2" Duration="0:0:0.2"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="PreviewMouseDown">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                            To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                             To="25" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                             To="0.95" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                             To="0.95" Duration="0:0:0.1"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="PreviewMouseUp">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                            To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                             To="15" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                             To="1" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                             To="1" Duration="0:0:0.1"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </Border.Triggers>
-                    <Border.Effect>
-                        <DropShadowEffect ShadowDepth="2"
-                              BlurRadius="15"
-                              Color="Gray"
-                              Opacity="0.2"/>
-                    </Border.Effect>
-                    <Label Grid.Column="2"
-                           Grid.Row="1"
-                           Content="Maintenance"
-                           Foreground="White"
-                           FontSize="20"
-                           FontFamily="Lucida Fax"
-                           FontWeight="Bold"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center" Margin="96,0,0,0"/>
-                </Border>
-            </Viewbox>
-            <Viewbox Stretch="Uniform"
-                     Grid.Column="1"
-                     Grid.Row="1">
-                <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1737500643/yulnav7tzmwaldnswvnz.png"
-                       Width="39"
-                       Height="39"/>
-            </Viewbox>
-        </Grid>
-
-        <!--Report Button-->
-        <Grid Grid.Column="1"
-              Grid.Row="19"
-              Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="24"></ColumnDefinition>
-                <ColumnDefinition Width="39"></ColumnDefinition>
-                <ColumnDefinition Width="33"></ColumnDefinition>
-                <ColumnDefinition Width="150"></ColumnDefinition>
-                <ColumnDefinition Width="126"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="11"></RowDefinition>
-                <RowDefinition Height="39"></RowDefinition>
-                <RowDefinition Height="11"></RowDefinition>
-            </Grid.RowDefinitions>
-
-            <Viewbox Stretch="Uniform"
-                     Grid.Column="0"
-                     Grid.ColumnSpan="5"
-                     Grid.Row="0"
-                     Grid.RowSpan="3">
-                <Border Name="btn_adminViewSettings"
-                        Background="Black"
-                        BorderBrush="Black"
-                        BorderThickness="0"
-                        CornerRadius="10"
-                        Width="372"
-                        Height="61">
-                    <Border.RenderTransform>
-                        <ScaleTransform x:Name="scaleTransformSettings" />
-                    </Border.RenderTransform>
-                    <Border.RenderTransformOrigin>
-                        <Point X="0.5" Y="0.5"/>
-                    </Border.RenderTransformOrigin>
-                    <Border.Triggers>
-                        <EventTrigger RoutedEvent="MouseEnter">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="DarkRed" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                                                     To="0.5" Duration="0:0:0.2"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="MouseLeave">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="Black" Duration="0:0:0.2"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity"
-                                                     To="0.2" Duration="0:0:0.2"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="PreviewMouseDown">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                                                     To="25" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                                     To="0.95" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                                     To="0.95" Duration="0:0:0.1"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="PreviewMouseUp">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="DarkRed" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius"
-                                                     To="15" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                                     To="1" Duration="0:0:0.1"/>
-                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                                     To="1" Duration="0:0:0.1"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </Border.Triggers>
-                    <Border.Effect>
-                        <DropShadowEffect ShadowDepth="2"
-                              BlurRadius="15"
-                              Color="Gray"
-                              Opacity="0.2"/>
-                    </Border.Effect>
-                    <Label Grid.Column="2"
-                           Grid.Row="1"
-                           Content="Settings"
-                           Foreground="White"
-                           FontSize="20"
-                           FontFamily="Lucida Fax"
-                           FontWeight="Bold"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center" Margin="96,0,0,0"/>
-                </Border>
-            </Viewbox>
-            <Viewbox Stretch="Uniform"
-                     Grid.Column="1"
-                     Grid.Row="1">
-                <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1737500643/yulnav7tzmwaldnswvnz.png"
-                       Width="39"
-                       Height="39"/>
-            </Viewbox>
-        </Grid>
+        
+        
     </Grid>
 </UserControl>

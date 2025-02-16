@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SanrooLK.Views.AdminOperations.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace SanrooLK.Views.MainFrames
         public LoginForm()
         {
             InitializeComponent();
+        }
+
+        private void Login_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.SwitchView(new AdminOperations.Views.AdminViewEmployee());
         }
     }
 }
