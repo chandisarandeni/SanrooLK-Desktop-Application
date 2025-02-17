@@ -11,8 +11,8 @@
         Loaded="WindowLoaded"
         Width="864"
         Height="558.5"
-        MinWidth="864"
-        MinHeight="558.5"
+        MinWidth="900"
+        MinHeight="600"
         Icon="https://res.cloudinary.com/dwbw83rrr/image/upload/v1737519807/pe4css3qsp457guxxp85.png"
         KeyDown="Window_KeyDown">
     <Grid>
