@@ -1,4 +1,5 @@
 ﻿using SanrooLK.Views.AdminOperations.Common;
+using SanrooLK.Views.MainFrames.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,69 +26,48 @@ namespace SanrooLK.Views.MainFrames
         public LoginForm()
         {
             InitializeComponent();
+
+            // Wire up the login button event
+            this.btn_Login.MouseDown += UserLogin.Login_MouseDown;
         }
 
-        private async void Login_MouseDown(object sender, MouseButtonEventArgs e)
+        //Forgot Password
+        // C#
+        private async void btn_ForgotPassword_MouseDown(object sender, MouseButtonEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
 
             if (mainWindow != null)
             {
-                // Create ScaleTransform for zoom effect
-                var transform = new ScaleTransform();
-                mainWindow.RenderTransform = transform;
-
-                // Set the center of scaling to the middle of the window
-                transform.CenterX = mainWindow.ActualWidth / 2;
-                transform.CenterY = mainWindow.ActualHeight / 2;
-
-                // Zoom out the current view (Scale to 0)
-                DoubleAnimation scaleOut = new DoubleAnimation(1, 0, TimeSpan.FromSeconds(0.5))
-                {
-                    EasingFunction = new CubicEase { EasingMode = EasingMode.EaseInOut }
-                };
-
                 // Fade out the current view
                 DoubleAnimation fadeOut = new DoubleAnimation(1, 0, TimeSpan.FromSeconds(0.5))
                 {
                     EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut }
                 };
 
-                // Apply animations to the current view
-                transform.BeginAnimation(ScaleTransform.ScaleXProperty, scaleOut);
-                transform.BeginAnimation(ScaleTransform.ScaleYProperty, scaleOut);
+                // Apply fade-out animation to the current view
                 mainWindow.BeginAnimation(UIElement.OpacityProperty, fadeOut);
 
-                // Wait for animations to finish
-                await Task.Delay(500);
+                // Wait for the animation to finish
+                await Task.Delay(10);
 
-                // Switch to the AdminDashboard view
-                mainWindow.SwitchView(new AdminOperations.Views.AdminDashboard());
+                // Switch to the ForgotPassword view
+                mainWindow.SwitchView(new Views.MainFrames.ForgotPassword());
 
-                // Reset transform for the new view (Zoomed out to center)
-                transform.ScaleX = 0;
-                transform.ScaleY = 0;
-                transform.CenterX = mainWindow.ActualWidth / 2;
-                transform.CenterY = mainWindow.ActualHeight / 2;
+                // Set the new view's opacity to 0 initially
                 mainWindow.Opacity = 0;
 
-                // Set the new view's fade-in and zoom-in animations
-                DoubleAnimation scaleIn = new DoubleAnimation(0, 1, TimeSpan.FromSeconds(0.5))
-                {
-                    EasingFunction = new CubicEase { EasingMode = EasingMode.EaseInOut }
-                };
-
+                // Fade in the new view
                 DoubleAnimation fadeIn = new DoubleAnimation(0, 1, TimeSpan.FromSeconds(0.5))
                 {
                     EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut }
                 };
 
-                // Apply animations to the new view
-                transform.BeginAnimation(ScaleTransform.ScaleXProperty, scaleIn);
-                transform.BeginAnimation(ScaleTransform.ScaleYProperty, scaleIn);
+                // Apply fade-in animation to the new view
                 mainWindow.BeginAnimation(UIElement.OpacityProperty, fadeIn);
             }
         }
+
 
     }
 }

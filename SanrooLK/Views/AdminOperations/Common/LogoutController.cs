@@ -1,13 +1,11 @@
-﻿using SanrooLK.Views.MainFrames;
+﻿// C#
+using SanrooLK.Views.MainFrames;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Input;
-using System.Windows.Media.Animation;
-using System.Windows.Media;
 using System.Windows;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Animation;
 
 namespace SanrooLK.Views.AdminOperations.Common
 {
@@ -15,63 +13,71 @@ namespace SanrooLK.Views.AdminOperations.Common
     {
         public static async void HandleLogout(object sender, MouseButtonEventArgs e)
         {
-            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            var result = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
-            if (mainWindow != null)
+            if (result == MessageBoxResult.Yes)
             {
-                // Create ScaleTransform for zoom effect
-                var transform = new ScaleTransform();
-                mainWindow.RenderTransform = transform;
+                var mainWindow = (MainWindow)Application.Current.MainWindow;
 
-                // Set the center of scaling to the middle of the window
-                transform.CenterX = mainWindow.ActualWidth / 2;
-                transform.CenterY = mainWindow.ActualHeight / 2;
-
-                // Zoom out the current view (Scale to 0)
-                DoubleAnimation scaleOut = new DoubleAnimation(1, 0, TimeSpan.FromSeconds(0.5))
+                if (mainWindow != null)
                 {
-                    EasingFunction = new CubicEase { EasingMode = EasingMode.EaseInOut }
-                };
+                    // Introduce a short delay for button click feedback
+                    await Task.Delay(300); // 100 milliseconds delay
 
-                // Fade out the current view
-                DoubleAnimation fadeOut = new DoubleAnimation(1, 0, TimeSpan.FromSeconds(0.5))
-                {
-                    EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut }
-                };
+                    // Create ScaleTransform for zoom effect
+                    var transform = new ScaleTransform();
+                    mainWindow.RenderTransform = transform;
 
-                // Apply animations to the current view
-                transform.BeginAnimation(ScaleTransform.ScaleXProperty, scaleOut);
-                transform.BeginAnimation(ScaleTransform.ScaleYProperty, scaleOut);
-                mainWindow.BeginAnimation(UIElement.OpacityProperty, fadeOut);
+                    // Set the center of scaling to the middle of the window
+                    transform.CenterX = mainWindow.ActualWidth / 2;
+                    transform.CenterY = mainWindow.ActualHeight / 2;
 
-                // Wait for animations to finish
-                await Task.Delay(500);
+                    // Zoom out the current view (Scale to 0)
+                    DoubleAnimation scaleOut = new DoubleAnimation(1, 0, TimeSpan.FromSeconds(0.5))
+                    {
+                        EasingFunction = new CubicEase { EasingMode = EasingMode.EaseInOut }
+                    };
 
-                // Switch to the LoginForm view
-                mainWindow.SwitchView(new LoginForm());
+                    // Fade out the current view
+                    DoubleAnimation fadeOut = new DoubleAnimation(1, 0, TimeSpan.FromSeconds(0.5))
+                    {
+                        EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut }
+                    };
 
-                // Reset transform for the new view (Zoomed out to center)
-                transform.ScaleX = 0;
-                transform.ScaleY = 0;
-                transform.CenterX = mainWindow.ActualWidth / 2;
-                transform.CenterY = mainWindow.ActualHeight / 2;
-                mainWindow.Opacity = 0;
+                    // Apply animations to the current view
+                    transform.BeginAnimation(ScaleTransform.ScaleXProperty, scaleOut);
+                    transform.BeginAnimation(ScaleTransform.ScaleYProperty, scaleOut);
+                    mainWindow.BeginAnimation(UIElement.OpacityProperty, fadeOut);
 
-                // Set the new view's fade-in and zoom-in animations
-                DoubleAnimation scaleIn = new DoubleAnimation(0, 1, TimeSpan.FromSeconds(0.5))
-                {
-                    EasingFunction = new CubicEase { EasingMode = EasingMode.EaseInOut }
-                };
+                    // Wait for animations to finish
+                    await Task.Delay(500);
 
-                DoubleAnimation fadeIn = new DoubleAnimation(0, 1, TimeSpan.FromSeconds(0.5))
-                {
-                    EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut }
-                };
+                    // Switch to the LoginForm view
+                    mainWindow.SwitchView(new LoginForm());
 
-                // Apply animations to the new view
-                transform.BeginAnimation(ScaleTransform.ScaleXProperty, scaleIn);
-                transform.BeginAnimation(ScaleTransform.ScaleYProperty, scaleIn);
-                mainWindow.BeginAnimation(UIElement.OpacityProperty, fadeIn);
+                    // Reset transform for the new view (Zoomed out to center)
+                    transform.ScaleX = 0;
+                    transform.ScaleY = 0;
+                    transform.CenterX = mainWindow.ActualWidth / 2;
+                    transform.CenterY = mainWindow.ActualHeight / 2;
+                    mainWindow.Opacity = 0;
+
+                    // Set the new view's fade-in and zoom-in animations
+                    DoubleAnimation scaleIn = new DoubleAnimation(0, 1, TimeSpan.FromSeconds(0.5))
+                    {
+                        EasingFunction = new CubicEase { EasingMode = EasingMode.EaseInOut }
+                    };
+
+                    DoubleAnimation fadeIn = new DoubleAnimation(0, 1, TimeSpan.FromSeconds(0.5))
+                    {
+                        EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut }
+                    };
+
+                    // Apply animations to the new view
+                    transform.BeginAnimation(ScaleTransform.ScaleXProperty, scaleIn);
+                    transform.BeginAnimation(ScaleTransform.ScaleYProperty, scaleIn);
+                    mainWindow.BeginAnimation(UIElement.OpacityProperty, fadeIn);
+                }
             }
         }
     }

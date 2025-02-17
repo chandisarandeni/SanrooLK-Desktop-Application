@@ -241,9 +241,7 @@
                                 BorderThickness="0"
                                 CornerRadius="10"
                                 Width="418"
-                                Height="50"
-                                MouseDown="Login_MouseDown"
-                               >
+                                Height="50">
                             <Border.RenderTransform>
                                 <ScaleTransform x:Name="scaleTransform" />
                             </Border.RenderTransform>
@@ -343,6 +341,7 @@
                                  Grid.Column="4"
                                  Grid.Row="0">
                             <Label Name="btn_ForgotPassword"
+                                   MouseDown="btn_ForgotPassword_MouseDown"
                                    Content="Click Here"
                                    FontSize="27"
                                    FontFamily="Lucida Fax"
