@@ -34,3 +34,11 @@ C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\Sanro
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarDashboard.baml
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarEmployee.g.cs
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarEmployee.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarCustomer.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Views\AdminViewCustomer.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarCustomer.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Views\AdminViewCustomer.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarProduct.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Views\AdminViewProduct.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarProduct.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Views\AdminViewProduct.baml

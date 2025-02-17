@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|c:\\users\\chand\\onedrive\\desktop\\github clones\\sanroolk-desktop-application\\sanroolk\\views\\adminoperations\\views\\adminviewemployee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|solutionrelative:views\\adminoperations\\views\\adminviewemployee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|c:\\users\\chand\\onedrive\\desktop\\github clones\\sanroolk-desktop-application\\sanroolk\\views\\adminoperations\\views\\adminviewproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|solutionrelative:views\\adminoperations\\views\\adminviewproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|c:\\users\\chand\\onedrive\\desktop\\github clones\\sanroolk-desktop-application\\sanroolk\\views\\adminoperations\\views\\admindashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|solutionrelative:views\\adminoperations\\views\\admindashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|c:\\users\\chand\\onedrive\\desktop\\github clones\\sanroolk-desktop-application\\sanroolk\\views\\adminoperations\\common\\menubar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -23,13 +27,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AdminViewEmployee.xaml",
-              "DocumentMoniker": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\AdminOperations\\Views\\AdminViewEmployee.xaml",
-              "RelativeDocumentMoniker": "Views\\AdminOperations\\Views\\AdminViewEmployee.xaml",
-              "ToolTip": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\AdminOperations\\Views\\AdminViewEmployee.xaml*",
-              "RelativeToolTip": "Views\\AdminOperations\\Views\\AdminViewEmployee.xaml*",
+              "Title": "AdminViewProduct.xaml",
+              "DocumentMoniker": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\AdminOperations\\Views\\AdminViewProduct.xaml",
+              "RelativeDocumentMoniker": "Views\\AdminOperations\\Views\\AdminViewProduct.xaml",
+              "ToolTip": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\AdminOperations\\Views\\AdminViewProduct.xaml*",
+              "RelativeToolTip": "Views\\AdminOperations\\Views\\AdminViewProduct.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-17T06:56:17.213Z",
+              "WhenOpened": "2025-02-17T10:13:36.168Z",
               "EditorCaption": ""
             }
           ]
@@ -40,10 +44,10 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "40e479e7-a69c-4384-a763-e3a2e0aa0141",
+        "Id": "f802a702-78b1-46fe-95f7-f5d34addb5a8",
         "Display": 0,
-        "X": 438,
-        "Y": 458,
+        "X": -443,
+        "Y": 334,
         "Width": 1419,
         "Height": 882,
         "WindowState": 2
@@ -56,13 +60,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AdminDashboard.xaml",
+              "DocumentMoniker": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\AdminOperations\\Views\\AdminDashboard.xaml",
+              "RelativeDocumentMoniker": "Views\\AdminOperations\\Views\\AdminDashboard.xaml",
+              "ToolTip": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\AdminOperations\\Views\\AdminDashboard.xaml",
+              "RelativeToolTip": "Views\\AdminOperations\\Views\\AdminDashboard.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-17T10:07:14.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MenuBar.xaml",
               "DocumentMoniker": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\AdminOperations\\Common\\MenuBar.xaml",
               "RelativeDocumentMoniker": "Views\\AdminOperations\\Common\\MenuBar.xaml",
               "ToolTip": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\AdminOperations\\Common\\MenuBar.xaml",
               "RelativeToolTip": "Views\\AdminOperations\\Common\\MenuBar.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-17T06:51:25.137Z",
+              "WhenOpened": "2025-02-17T10:07:21.34Z",
               "EditorCaption": ""
             }
           ]
