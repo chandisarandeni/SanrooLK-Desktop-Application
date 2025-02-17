@@ -13,6 +13,9 @@
     <Compile Update="Views\AdminOperations\Common\MenuBarCustomer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\AdminOperations\Common\MenuBarCustomerService.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\AdminOperations\Common\MenuBarDashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,16 +25,25 @@
     <Compile Update="Views\AdminOperations\Common\MenuBarProduct.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\AdminOperations\Common\MenuBarSales.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\AdminOperations\Views\AdminDashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\AdminOperations\Views\AdminViewCustomer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\AdminOperations\Views\AdminViewCustomerService.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\AdminOperations\Views\AdminViewEmployee.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\AdminOperations\Views\AdminViewProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AdminOperations\Views\AdminViewSales.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\MainFrames\ForgotPassword.xaml.cs">
@@ -51,6 +63,9 @@
     <Page Update="Views\AdminOperations\Common\MenuBarCustomer.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\AdminOperations\Common\MenuBarCustomerService.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\AdminOperations\Common\MenuBarDashboard.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -60,16 +75,25 @@
     <Page Update="Views\AdminOperations\Common\MenuBarProduct.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\AdminOperations\Common\MenuBarSales.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\AdminOperations\Views\AdminDashboard.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AdminOperations\Views\AdminViewCustomer.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\AdminOperations\Views\AdminViewCustomerService.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\AdminOperations\Views\AdminViewEmployee.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AdminOperations\Views\AdminViewProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminOperations\Views\AdminViewSales.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainFrames\ForgotPassword.xaml">
