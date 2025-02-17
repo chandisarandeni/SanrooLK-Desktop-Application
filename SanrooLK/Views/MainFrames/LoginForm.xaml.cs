@@ -29,7 +29,7 @@ namespace SanrooLK.Views.MainFrames
         private void Login_MouseDown(object sender, MouseButtonEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.SwitchView(new AdminOperations.Views.AdminViewEmployee());
+            mainWindow?.SwitchView(new AdminOperations.Views.AdminDashboard());
         }
     }
 }

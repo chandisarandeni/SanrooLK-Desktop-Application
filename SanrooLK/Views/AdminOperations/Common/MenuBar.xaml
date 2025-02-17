@@ -96,7 +96,7 @@
                 <!--Change the properties when it is copied-->
                 <!--Change Background Color-->
                 <Border Name="btn_adminDashboard"
-                        Background="Black"
+                        Background="#E0E0E0"
                         BorderBrush="Black"
                         BorderThickness="0"
                         CornerRadius="10"
@@ -152,9 +152,9 @@
                         </EventTrigger>
                     </Border.Triggers>
                     <Border.Effect>
-                        <!--Change the blur rad when it is in normal button format (rad into 10)-->
+                        <!--Change the blur rad when it is in normal button format (rad into 15)-->
                         <DropShadowEffect ShadowDepth="2"
-                                          BlurRadius="15"
+                                          BlurRadius="5"
                                           Color="Gray"
                                           Opacity="0.2"/>
                     </Border.Effect>
@@ -166,7 +166,7 @@
                         </Grid.ColumnDefinitions>
                     
                         <!--Change the icon regarding to button-->
-                        <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1739677595/material-symbols--dashboard-rounded_1_hrnsup.png"
+                        <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1739677595/material-symbols--dashboard-rounded_mr5vre.png"
                                Width="39"
                                Height="39"
                                Margin="23,0,0,0"
@@ -176,7 +176,7 @@
                         <!--Change Font Color-->
                         <Label Grid.Column="1"
                                Content="Dashboard"
-                               Foreground="White"
+                               Foreground="Black"
                                FontSize="20"
                                FontFamily="Lucida Fax"
                                FontWeight="Bold"
@@ -932,10 +932,10 @@
             </Grid.RowDefinitions>
 
             <Viewbox Stretch="Uniform"
-             Grid.Column="0"
-             Grid.ColumnSpan="5"
-             Grid.Row="0"
-             Grid.RowSpan="3">
+                     Grid.Column="0"
+                     Grid.ColumnSpan="5"
+                     Grid.Row="0"
+                     Grid.RowSpan="3">
                 <!--Change the properties when it is copied-->
                 <!--Change Background Color-->
                 <Border Name="btn_adminViewReports"
@@ -1053,10 +1053,10 @@
             </Grid.RowDefinitions>
 
             <Viewbox Stretch="Uniform"
-             Grid.Column="0"
-             Grid.ColumnSpan="5"
-             Grid.Row="0"
-             Grid.RowSpan="3">
+                     Grid.Column="0"
+                     Grid.ColumnSpan="5"
+                     Grid.Row="0"
+                     Grid.RowSpan="3">
                 <!--Change the properties when it is copied-->
                 <!--Change Background Color-->
                 <Border Name="btn_adminViewSettings"
@@ -1159,12 +1159,12 @@
         <!--Logout Button-->
         <Grid Grid.Column="3" Grid.Row="1">
             <Image Name="btn_Logout"
-           Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1739762715/line-md--logout_hsfck8.png"
-           Width="42"
-           Height="42"
-           Margin="136,0,57,0"
-           VerticalAlignment="Center"
-           Cursor="Hand">
+                   Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1739762715/line-md--logout_hsfck8.png"
+                   Width="42"
+                   Height="42"
+                   Margin="136,0,57,0"
+                   VerticalAlignment="Center"
+                   Cursor="Hand">
                 <Image.RenderTransform>
                     <ScaleTransform x:Name="scaleTransform" ScaleX="1" ScaleY="1"/>
                 </Image.RenderTransform>

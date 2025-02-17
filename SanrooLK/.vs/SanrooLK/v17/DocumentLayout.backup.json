@@ -1,36 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|c:\\users\\chand\\onedrive\\desktop\\github clones\\sanroolk-desktop-application\\sanroolk\\views\\adminoperations\\common\\menubar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{94F06396-C017-40F9-AAF8-27A065E9B48A}|SanrooLK.csproj|solutionrelative:views\\adminoperations\\common\\menubar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedHeight": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MenuBar.xaml",
-              "DocumentMoniker": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\AdminOperations\\Common\\MenuBar.xaml",
-              "RelativeDocumentMoniker": "Views\\AdminOperations\\Common\\MenuBar.xaml",
-              "ToolTip": "C:\\Users\\chand\\OneDrive\\Desktop\\GitHub Clones\\SanrooLK-Desktop-Application\\SanrooLK\\Views\\AdminOperations\\Common\\MenuBar.xaml*",
-              "RelativeToolTip": "Views\\AdminOperations\\Common\\MenuBar.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-17T04:12:53.869Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

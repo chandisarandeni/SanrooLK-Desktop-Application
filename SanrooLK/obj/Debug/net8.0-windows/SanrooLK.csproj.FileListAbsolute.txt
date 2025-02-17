@@ -30,3 +30,7 @@ C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\Sanro
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Views\AdminViewEmployee.g.cs
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Views\AdminViewEmployee.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarDashboard.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarDashboard.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarEmployee.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarEmployee.baml

@@ -20,8 +20,8 @@
                     <RowDefinition Height="1117"></RowDefinition>
                 </Grid.RowDefinitions>
                 
-                <!--Call for menubar-->
-                <Common:MenuBar Grid.Column="0" Grid.Row="0"/>
+                <!--Call for MenuBar-->
+                <Common:MenuBarEmployee Grid.Column="0" Grid.Row="0"/>
             </Grid>
         </Viewbox>
     </Grid>
