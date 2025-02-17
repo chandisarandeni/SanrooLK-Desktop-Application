@@ -48,3 +48,13 @@ C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\Sanro
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Views\AdminViewSales.baml
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarCustomerService.g.cs
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarCustomerService.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarMaintenance.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarReport.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarSettings.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Views\AdminViewCustomerService.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Views\AdminViewMaintenance.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarMaintenance.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarReport.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\MenuBarSettings.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Views\AdminViewCustomerService.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Views\AdminViewMaintenance.baml
