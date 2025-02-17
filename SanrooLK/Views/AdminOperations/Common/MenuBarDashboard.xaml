@@ -218,7 +218,6 @@
                 <!--Change the properties when it is copied-->
                 <!--Change Background Color-->
                 <Border Name="btn_adminViewEmployee"
-                        MouseDown="adminViewEmployee_MouseDown"
                         Background="#E0E0E0"
                         BorderBrush="Black"
                         BorderThickness="0"
@@ -340,7 +339,6 @@
                 <!--Change the properties when it is copied-->
                 <!--Change Background Color-->
                 <Border Name="btn_adminViewCustomer"
-                        MouseDown="AdminViewCustomer_MouseDown"
                         Background="#E0E0E0"
                         BorderBrush="Black"
                         BorderThickness="0"
@@ -703,7 +701,7 @@
                       Grid.RowSpan="3">
                 <!--Change the properties when it is copied-->
                 <!--Change Background Color-->
-                <Border Name="adminViewCustomerService"
+                <Border Name="btn_adminViewCustomerService"
                         Background="#E0E0E0"
                         BorderBrush="Black"
                         BorderThickness="0"
@@ -824,7 +822,7 @@
                      Grid.RowSpan="3">
                 <!--Change the properties when it is copied-->
                 <!--Change Background Color-->
-                <Border Name="btn_Maintenance"
+                <Border Name="btn_AdminViewMaintenance"
                         Background="#E0E0E0"
                         BorderBrush="Black"
                         BorderThickness="0"
@@ -1166,7 +1164,6 @@
         <!--Logout Button-->
         <Grid Grid.Column="3" Grid.Row="1">
             <Image Name="btn_Logout"
-                   MouseDown="btn_Logout_MouseDown"
                    Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1739762715/line-md--logout_hsfck8.png"
                    Width="42"
                    Height="42"

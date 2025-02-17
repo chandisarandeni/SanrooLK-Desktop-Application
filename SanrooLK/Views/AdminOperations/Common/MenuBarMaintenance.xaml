@@ -700,7 +700,7 @@
                       Grid.RowSpan="3">
                 <!--Change the properties when it is copied-->
                 <!--Change Background Color-->
-                <Border Name="adminViewCustomerService"
+                <Border Name="btn_adminViewCustomerService"
                         Background="#E0E0E0"
                         BorderBrush="Black"
                         BorderThickness="0"
@@ -821,7 +821,7 @@
                      Grid.RowSpan="3">
                 <!--Change the properties when it is copied-->
                 <!--Change Background Color-->
-                <Border Name="btn_Maintenance"
+                <Border Name="btn_adminViewMaintenance"
                         Background="Black"
                         BorderBrush="Black"
                         BorderThickness="0"
