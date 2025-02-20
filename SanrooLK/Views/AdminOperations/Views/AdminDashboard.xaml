@@ -23,7 +23,258 @@
 
                 <!--Call for menubar-->
                 <Common:MenuBarDashboard Grid.Column="0" Grid.Row="0"/>
-                
+
+                <Grid Grid.Column="1"
+                      Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="85"></ColumnDefinition>
+                        <ColumnDefinition Width='160'></ColumnDefinition>
+                        <ColumnDefinition Width="85"></ColumnDefinition>
+                        <ColumnDefinition Width='160'></ColumnDefinition>
+                        <ColumnDefinition Width="85"></ColumnDefinition>
+                        <ColumnDefinition Width='160'></ColumnDefinition>
+                        <ColumnDefinition Width="68"></ColumnDefinition>
+                        <ColumnDefinition Width='17'></ColumnDefinition>
+                        <ColumnDefinition Width="389"></ColumnDefinition>
+                        <ColumnDefinition Width="80"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="83"></RowDefinition>
+                        <RowDefinition Height="39"></RowDefinition>
+                        <RowDefinition Height="134"></RowDefinition>
+                        <RowDefinition Height="160"></RowDefinition>
+                        <RowDefinition Height="10"></RowDefinition>
+                        <RowDefinition Height="39"></RowDefinition>
+                        <RowDefinition Height="26"></RowDefinition>
+                        <RowDefinition Height="39"></RowDefinition>
+                        <RowDefinition Height="18"></RowDefinition>
+                        <RowDefinition Height="465"></RowDefinition>
+                        <RowDefinition Height="104"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Viewbox Grid.Column="3"
+                             Grid.Row="1"
+                             Grid.ColumnSpan="4">
+                        <Label Content="Admin Dashboard"
+                               FontFamily="Lucida Fax"
+                               FontSize="25"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1"
+                             Grid.Row="2"
+                             Grid.ColumnSpan="8">
+                        <Label Content="___________________________________________________________________________________________________________________________________________________________________________________________________________"
+                               FontFamily="Lucida Fax"
+                               FontSize="2"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" Height="13"/>
+                    </Viewbox>
+                    
+                    <!--Count Details-->
+                    
+                    <!--Total Customer Count-->
+                    <Viewbox Grid.Column="1"
+                             Grid.Row="3">
+                        <Border Background="#E0E0E0"
+                                BorderBrush="Black"
+                                BorderThickness="0"
+                                CornerRadius="10"
+                                Width="160"
+                                Height="160">
+                            <Border.Effect>
+                                <!--Change the blur rad when it is in normal button format (rad into 15)-->
+                                <DropShadowEffect ShadowDepth="2"
+                                                  BlurRadius="5"
+                                                  Color="Gray"
+                                                  Opacity="0.2"/>
+                            </Border.Effect>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <!--Change the text regarding to figma design-->
+                                <!--Change Font Color-->
+                                <Label Name="lbl_totalRegisteredCustomers"
+                                       Grid.Column="1"
+                                       Content="102"
+                                       Foreground="Black"
+                                       FontSize="40"
+                                       FontFamily="Lucida Fax"
+                                       FontWeight="Bold"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                            </Grid>
+                        </Border>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1"
+                             Grid.Row="5">
+                        <Label Content="       Total Customers"
+                               FontFamily="Lucida Fax"
+                               FontWeight="Bold"
+                               FontSize="20" 
+                               Height="67" 
+                               Width="274"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                    </Viewbox>
+                    
+                    <!--Employee Count-->
+                    <Viewbox Grid.Column="3"
+                             Grid.Row="3">
+                        <Border Background="#E0E0E0"
+                                BorderBrush="Black"
+                                BorderThickness="0"
+                                CornerRadius="10"
+                                Width="160"
+                                Height="160">
+                            <Border.Effect>
+                                <!--Change the blur rad when it is in normal button format (rad into 15)-->
+                                <DropShadowEffect ShadowDepth="2"
+                                                  BlurRadius="5"
+                                                  Color="Gray"
+                                                  Opacity="0.2"/>
+                            </Border.Effect>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <!--Change the text regarding to figma design-->
+                                <!--Change Font Color-->
+                                <Label Name="lbl_TotalEmployeeCount"
+                                       Grid.Column="1"
+                                       Content="23"
+                                       Foreground="Black"
+                                       FontSize="40"
+                                       FontFamily="Lucida Fax"
+                                       FontWeight="Bold"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                            </Grid>
+                        </Border>
+                    </Viewbox>
+                    <Viewbox Grid.Column="3"
+                             Grid.Row="5">
+                        <Label Content="       Total Employees"
+                               FontFamily="Lucida Fax"
+                               FontWeight="Bold"
+                               FontSize="20" 
+                               Height="67" 
+                               Width="274"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                    </Viewbox>
+                    
+                    
+                    <!--Available Product Count-->
+                    <Viewbox Grid.Column="5"
+                             Grid.Row="3">
+                        <Border Background="#E0E0E0"
+                                BorderBrush="Black"
+                                BorderThickness="0"
+                                CornerRadius="10"
+                                Width="160"
+                                Height="160">
+                            <Border.Effect>
+                                <!--Change the blur rad when it is in normal button format (rad into 15)-->
+                                <DropShadowEffect ShadowDepth="2"
+                                                  BlurRadius="5"
+                                                  Color="Gray"
+                                                  Opacity="0.2"/>
+                            </Border.Effect>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <!--Change the text regarding to figma design-->
+                                <!--Change Font Color-->
+                                <Label Name="lbl_TotalAvailableProducts"
+                                       Grid.Column="1"
+                                       Content="45"
+                                       Foreground="Black"
+                                       FontSize="40"
+                                       FontFamily="Lucida Fax"
+                                       FontWeight="Bold"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                            </Grid>
+                        </Border>
+                    </Viewbox>
+                    <Viewbox Grid.Column="5"
+                             Grid.Row="5">
+                        <Label Content="       Available Products"
+                               FontFamily="Lucida Fax"
+                               FontWeight="Bold"
+                               FontSize="20" 
+                               Height="67" 
+                               Width="274"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                    </Viewbox>
+
+                    
+                    <!--Calendar Area-->
+                    <Viewbox Grid.Column="8"
+                             Grid.Row="3">
+                        <Border Background="#E0E0E0"
+                                BorderBrush="Black"
+                                BorderThickness="0"
+                                CornerRadius="10"
+                                Width="400"
+                                Height="160">
+                            <Border.Effect>
+                                <!--Change the blur rad when it is in normal button format (rad into 15)-->
+                                <DropShadowEffect ShadowDepth="2"
+                                                  BlurRadius="5"
+                                                  Color="Gray"
+                                                  Opacity="0.2"/>
+                            </Border.Effect>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+
+                                <Viewbox Grid.Column="4" Grid.Row="3">
+                                    <TextBlock Text="{Binding CurrentDate}"
+                                               FontFamily="Lucida Fax"
+                                               FontWeight="Bold"
+                                               FontSize="40"/>
+                                </Viewbox>
+
+                                <Viewbox Grid.Column="4" Grid.Row="5">
+                                    <TextBlock Text="{Binding CurrentTime}"
+                                               FontFamily="Lucida Fax"
+                                               FontWeight="Bold"
+                                               FontSize="40"
+                                               HorizontalAlignment="Left"/>
+                                </Viewbox>
+                            </Grid>
+
+                        </Border>
+                    </Viewbox>
+                </Grid>
             </Grid>
         </Viewbox>
     </Grid>
