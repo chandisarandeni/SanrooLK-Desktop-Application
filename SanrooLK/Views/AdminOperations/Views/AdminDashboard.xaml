@@ -271,8 +271,17 @@
                                                HorizontalAlignment="Left"/>
                                 </Viewbox>
                             </Grid>
-
                         </Border>
+                    </Viewbox>
+                    
+                    <!--Recent Sales Details-->
+                    <Viewbox Grid.Column="1"
+                             Grid.Row="7"
+                             Grid.ColumnSpan="2">
+                        <Label Content="Recent Sales Details"
+                               FontFamily="Lucida Fax"
+                               FontSize="30"
+                               FontWeight="Black"/>
                     </Viewbox>
                 </Grid>
             </Grid>

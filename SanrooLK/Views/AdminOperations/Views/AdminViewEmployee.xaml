@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SanrooLK.Views.AdminOperations.Views"
              xmlns:Common="clr-namespace:SanrooLK.Views.AdminOperations.Common"
+             xmlns:UpMenu="clr-namespace:SanrooLK.Views.AdminOperations.Common"
              mc:Ignorable="d" 
              MinWidth="864"
              MinHeight="558.5"
@@ -19,9 +20,25 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1117"></RowDefinition>
                 </Grid.RowDefinitions>
-                
+
                 <!--Call for MenuBar-->
                 <Common:MenuBarEmployee Grid.Column="0" Grid.Row="0"/>
+                
+                
+                <Viewbox Grid.Column="1"
+                         Grid.Row="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1289"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="176"></RowDefinition>
+                            <RowDefinition Height="941"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <UpMenu:UpMenuEmployee Grid.Column="0" Grid.Row="0"/>
+                    </Grid>
+                </Viewbox>
             </Grid>
         </Viewbox>
     </Grid>
