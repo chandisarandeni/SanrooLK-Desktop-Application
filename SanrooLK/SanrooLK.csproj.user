@@ -37,7 +37,28 @@
     <Compile Update="Views\AdminOperations\Common\MenuBarSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\AdminOperations\Common\UpMenuCustomer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AdminOperations\Common\UpMenuCustomerService.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\AdminOperations\Common\UpMenuEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AdminOperations\Common\UpMenuMaintenance.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AdminOperations\Common\UpMenuProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AdminOperations\Common\UpMenuReports.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AdminOperations\Common\UpMenuSales.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AdminOperations\Common\UpMenuSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\AdminOperations\Views\AdminDashboard.xaml.cs">
@@ -108,7 +129,28 @@
     <Page Update="Views\AdminOperations\Common\MenuBarSettings.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\AdminOperations\Common\UpMenuCustomer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminOperations\Common\UpMenuCustomerService.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\AdminOperations\Common\UpMenuEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminOperations\Common\UpMenuMaintenance.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminOperations\Common\UpMenuProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminOperations\Common\UpMenuReports.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminOperations\Common\UpMenuSales.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminOperations\Common\UpMenuSettings.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AdminOperations\Views\AdminDashboard.xaml">

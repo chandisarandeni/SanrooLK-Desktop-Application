@@ -9,7 +9,8 @@
              MinHeight="558.5"
              Background="White"
              
-             xmlns:Common="clr-namespace:SanrooLK.Views.AdminOperations.Common">
+             xmlns:Common="clr-namespace:SanrooLK.Views.AdminOperations.Common"
+             xmlns:UpMenu="clr-namespace:SanrooLK.Views.AdminOperations.Common">
     <Grid>
         <Viewbox Stretch="Uniform">
             <Grid>
@@ -24,6 +25,20 @@
                 <!--Call for menubar-->
                 <Common:MenuBarMaintenance Grid.Column="0" Grid.Row="0"/>
 
+                <Viewbox Grid.Column="1"
+         Grid.Row="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1289"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="176"></RowDefinition>
+                            <RowDefinition Height="941"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <UpMenu:UpMenuMaintenance Grid.Column="0" Grid.Row="0"/>
+                    </Grid>
+                </Viewbox>
             </Grid>
         </Viewbox>
     </Grid>

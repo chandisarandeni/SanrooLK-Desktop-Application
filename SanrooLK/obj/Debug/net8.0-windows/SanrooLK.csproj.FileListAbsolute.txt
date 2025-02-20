@@ -88,3 +88,17 @@ C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\Sanro
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\bin\Debug\net8.0-windows\Snappier.dll
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuEmployee.g.cs
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuEmployee.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuCustomer.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuCustomer.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuProduct.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuProduct.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuSales.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuSales.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuCustomerService.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuMaintenance.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuReports.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuSettings.g.cs
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuCustomerService.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuMaintenance.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuReports.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuSettings.baml

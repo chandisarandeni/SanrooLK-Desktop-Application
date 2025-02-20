@@ -20,35 +20,35 @@
             <RowDefinition Height="54"></RowDefinition>
         </Grid.RowDefinitions>
 
-    <Viewbox Grid.Column="1"
-                 Grid.Row="1">
-        <Label Content="Employee Management"
-                   FontFamily="Lucida Fax"
-                   FontSize="24"
-                   FontWeight="Bold"
-                   Foreground="Black"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   Margin="0,0,0,0"/>
-    </Viewbox>
-
-    <Viewbox Grid.Column="3"
-                 Grid.Row="1"
-                 Grid.RowSpan="2">
-        <TextBlock Text="{Binding CurrentTime}"
+        <Viewbox Grid.Column="1"
+                     Grid.Row="1">
+            <Label Content="Employee Management"
                        FontFamily="Lucida Fax"
                        FontSize="24"
                        FontWeight="Bold"
+                       Foreground="Black"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       Foreground="Black" />
-    </Viewbox>
+                       Margin="0,0,0,0"/>
+        </Viewbox>
 
-    <Viewbox Grid.Column="0"
-                 Grid.Row="2"
-                 Grid.ColumnSpan="5">
-        <Label Content="__________________________________________________________________________________________________________________________________________________________________________________________________________________________________" Height="25"
-                   />
-    </Viewbox>
+        <Viewbox Grid.Column="3"
+                     Grid.Row="1"
+                     Grid.RowSpan="2">
+            <TextBlock Text="{Binding CurrentTime}"
+                           FontFamily="Lucida Fax"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Foreground="Black" />
+        </Viewbox>
+
+        <Viewbox Grid.Column="0"
+                     Grid.Row="2"
+                     Grid.ColumnSpan="5">
+            <Label Content="__________________________________________________________________________________________________________________________________________________________________________________________________________________________________" Height="25"
+                       />
+        </Viewbox>
     </Grid>
 </UserControl>
