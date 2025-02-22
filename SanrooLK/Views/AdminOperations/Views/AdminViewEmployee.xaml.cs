@@ -24,5 +24,32 @@ namespace SanrooLK.Views.AdminOperations.Views
         {
             InitializeComponent();
         }
+
+        private void txt_employeeID_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (txt_employeeID.Text == "Enter Employee ID or NIC to View Details")
+            {
+                txt_employeeID.Text = "";
+                txt_employeeID.Foreground = Brushes.Black;
+            }
+        }
+
+        private void txt_employeeID_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            if (txt_employeeID.Text == "Enter Employee ID or NIC to View Details")
+            {
+                txt_employeeID.Text = "";
+                txt_employeeID.Foreground = Brushes.Black;
+            }
+        }
+
+        private void txt_employeeID_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_employeeID.Text))
+            {
+                txt_employeeID.Text = "Enter Employee ID or NIC to View Details";
+                txt_employeeID.Foreground = Brushes.Gray;
+            }
+        }
     }
 }
