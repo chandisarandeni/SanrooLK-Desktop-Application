@@ -321,15 +321,13 @@
                                                               Color="Gray"
                                                               Opacity="0.2"/>
                                         </Border.Effect>
-
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="Auto"/>
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
-
-                                            <!--Change the text regarding to figma design-->
-                                            <!--Change Font Color-->
+                                            <!--Image of the button-->
+                                            <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1740275935/material-symbols--add-rounded_sughvd.png"/>
                                         </Grid>
                                     </Border>
                                 </Viewbox>
@@ -410,8 +408,8 @@
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
 
-                                            <!--Change the text regarding to figma design-->
-                                            <!--Change Font Color-->
+                                            <!--Image of the button-->
+                                            <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1740275935/clarity--employee-solid_pgvoqe.png" Margin="10,8,10,8"/>
                                         </Grid>
                                     </Border>
                                 </Viewbox>
@@ -492,8 +490,8 @@
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
 
-                                            <!--Change the text regarding to figma design-->
-                                            <!--Change Font Color-->
+                                            <!--Image of the button-->
+                                            <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1740275935/ic--outline-print_scmwaz.png" Margin="5,5,5,5"/>
                                         </Grid>
                                     </Border>
                                 </Viewbox>

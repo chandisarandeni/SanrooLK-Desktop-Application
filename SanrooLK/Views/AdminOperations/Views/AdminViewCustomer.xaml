@@ -37,6 +37,550 @@
                         </Grid.RowDefinitions>
 
                         <UpMenu:UpMenuCustomer Grid.Column="0" Grid.Row="0"/>
+
+
+                        <!--Employee Sub Area-->
+                        <Grid Grid.Column="0"
+                              Grid.Row="1">
+                            <!--Define the sub area-->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"></ColumnDefinition>
+                                <ColumnDefinition Width="242"></ColumnDefinition>
+                                <ColumnDefinition Width="88"></ColumnDefinition>
+                                <ColumnDefinition Width="15"></ColumnDefinition>
+                                <ColumnDefinition Width="43"></ColumnDefinition>
+                                <ColumnDefinition Width="377"></ColumnDefinition>
+                                <ColumnDefinition Width="15"></ColumnDefinition>
+                                <ColumnDefinition Width="260"></ColumnDefinition>
+                                <ColumnDefinition Width="29"></ColumnDefinition>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                                <ColumnDefinition Width="80"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="17"></RowDefinition>
+                                <RowDefinition Height="39"></RowDefinition>
+                                <RowDefinition Height="17"></RowDefinition>
+                                <RowDefinition Height="61"></RowDefinition>
+                                <RowDefinition Height="33"></RowDefinition>
+                                <RowDefinition Height="39"></RowDefinition>
+                                <RowDefinition Height="18"></RowDefinition>
+                                <RowDefinition Height="613"></RowDefinition>
+                                <RowDefinition Height="104"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <!--Total Employee Count-->
+                            <Viewbox Stretch="Uniform"
+                                     Grid.Column="1"
+                                     Grid.Row="1">
+                                <Label Content="Total Customer Count:"
+                                       FontFamily="Lucida Fax"
+                                       FontWeight="Bold"
+                                       HorizontalAlignment="Left"/>
+                            </Viewbox>
+                            <Viewbox Stretch="Uniform"
+                                     Grid.Column="2"
+                                     Grid.Row="1">
+                                <Label Name="lbl_totalCustomerCount"
+                                       Content="12"
+                                       FontFamily="Lucida Fax"
+                                       FontWeight="Bold"
+                                       HorizontalAlignment="Left"/>
+                            </Viewbox>
+
+                            <!--Employee Count Text Block-->
+                            <Viewbox Stretch="Uniform"
+                                     Grid.Column="1"
+                                     Grid.Row="3"
+                                     Grid.ColumnSpan="5">
+                                <Border Background="White"
+                                        BorderBrush="Black"
+                                        BorderThickness="0"
+                                        CornerRadius="10"
+                                        Width="629"
+                                        Height="50">
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="2"
+                                                          BlurRadius="5"
+                                                          Color="Gray"
+                                                          Opacity="20"/>
+                                    </Border.Effect>
+                                    <TextBox Name="txt_employeeID"
+                                             HorizontalAlignment="Center" 
+                                             VerticalAlignment="Center" 
+                                             Width="608" 
+                                             Height="40" 
+                                             Padding="0, 5, 0, 5"
+                                             Background="Transparent"
+                                             CaretBrush="#C1C1D2"
+                                             FontFamily="Lucida Fax"
+                                             FontSize="15"
+                                             Foreground="Gray"
+                                             VerticalContentAlignment="Center"
+                                             BorderThickness="0"
+                                             Text="Enter Customer ID or NIC to View Details"
+                                             GotFocus="txt_customerID_GotFocus"
+                                             PreviewTextInput="txt_customerID_PreviewTextInput"
+                                             LostFocus="txt_customerID_LostFocus"/>
+                                </Border>
+                            </Viewbox>
+
+
+                            <!--Search Button-->
+                            <Grid Grid.Column="7"
+                                  Grid.Row="3"
+                                  Grid.ColumnSpan="3">
+
+
+                                <Viewbox Stretch="Uniform"
+                                         Grid.Column="0"
+                                         Grid.ColumnSpan="5"
+                                         Grid.Row="0"
+                                         Grid.RowSpan="3">
+                                    <!--Change the properties when it is copied-->
+                                    <!--Change Background Color-->
+                                    <Border Name="btn_adminDashboard"
+                                            Background="Black"
+                                            BorderBrush="Black"
+                                            BorderThickness="0"
+                                            CornerRadius="10"
+                                            Width="354"
+                                            Height="61">
+                                        <Border.RenderTransform>
+                                            <!--Change the properties when it is copied-->
+                                            <ScaleTransform x:Name="scaleTransformForadminDashboard" />
+                                        </Border.RenderTransform>
+                                        <Border.RenderTransformOrigin>
+                                            <Point X="0.5" Y="0.5"/>
+                                        </Border.RenderTransformOrigin>
+                                        <Border.Triggers>
+                                            <EventTrigger RoutedEvent="MouseEnter">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.2"/>
+                                                        <!--Color change Mouse Hover-->
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                            <EventTrigger RoutedEvent="MouseLeave">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="Black" Duration="0:0:0.2"/>
+                                                        <!--Color change Mouse Leave-->
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                            <EventTrigger RoutedEvent="PreviewMouseDown">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.1"/>
+                                                        <!--Color change Mouse Click-->
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                             To="0.95" Duration="0:0:0.1"/>
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                             To="0.95" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                            <EventTrigger RoutedEvent="PreviewMouseUp">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.1"/>
+                                                        <!--Color change Mouse Release-->
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                             To="1" Duration="0:0:0.1"/>
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                             To="1" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                        </Border.Triggers>
+                                        <Border.Effect>
+                                            <!--Change the blur rad when it is in normal button format (rad into 10)-->
+                                            <DropShadowEffect ShadowDepth="2"
+                                                              BlurRadius="15"
+                                                              Color="Gray"
+                                                              Opacity="0.2"/>
+                                        </Border.Effect>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <!--Change the text regarding to figma design-->
+                                            <!--Change Font Color-->
+                                            <Label Grid.Column="1"
+                                                   Content="Search"
+                                                   Foreground="White"
+                                                   FontSize="30"
+                                                   FontFamily="Lucida Fax"
+                                                   FontWeight="Bold"
+                                                   HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center" Width="126"/>
+                                        </Grid>
+                                    </Border>
+                                </Viewbox>
+                            </Grid>
+
+                            <!--Employee Details Area-->
+                            <Viewbox Grid.Column="1"
+                                     Grid.Row="5">
+                                <Label Content="Customer Details"
+                                       FontFamily="Lucida Fax"
+                                       FontWeight="Bold"
+                                       FontSize="25"/>
+                            </Viewbox>
+
+
+                            <!--Cutomer Button Grid Start-->
+                            <Grid Grid.Column="9"
+                                  Grid.Row="7">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60"></RowDefinition>
+                                    <RowDefinition Height="36"></RowDefinition>
+                                    <RowDefinition Height="60"></RowDefinition>
+                                    <RowDefinition Height="397"></RowDefinition>
+                                    <RowDefinition Height="60"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <!--Custom Button Area-->
+                                <!--Add Employee Button-->
+                                <Viewbox Grid.Column="0"
+                                         Grid.Row="0" Margin="0,0,-60,0">
+                                    <Border Name="btn_addEmploye"
+                                            Background="Black"
+                                            BorderBrush="Black"
+                                            BorderThickness="0"
+                                            CornerRadius="10"
+                                            Width="60"
+                                            Height="60">
+                                        <Border.RenderTransform>
+                                            <!--Change the properties when it is copied-->
+                                            <ScaleTransform x:Name="scaleTransformForaddEmployee" />
+                                        </Border.RenderTransform>
+                                        <Border.RenderTransformOrigin>
+                                            <Point X="0.5" Y="0.5"/>
+                                        </Border.RenderTransformOrigin>
+                                        <Border.Triggers>
+                                            <EventTrigger RoutedEvent="MouseEnter">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.2"/>
+                                                        <!--Color change Mouse Hover-->
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                            <EventTrigger RoutedEvent="MouseLeave">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="Black" Duration="0:0:0.2"/>
+                                                        <!--Color change Mouse Leave-->
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                            <EventTrigger RoutedEvent="PreviewMouseDown">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.1"/>
+                                                        <!--Color change Mouse Click-->
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                             To="0.95" Duration="0:0:0.1"/>
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                             To="0.95" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                            <EventTrigger RoutedEvent="PreviewMouseUp">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.1"/>
+                                                        <!--Color change Mouse Release-->
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                             To="1" Duration="0:0:0.1"/>
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                             To="1" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                        </Border.Triggers>
+                                        <Border.Effect>
+                                            <!--Change the blur rad when it is in normal button format (rad into 10)-->
+                                            <DropShadowEffect ShadowDepth="2"
+                                                              BlurRadius="15"
+                                                              Color="Gray"
+                                                              Opacity="0.2"/>
+                                        </Border.Effect>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <!--Image of the button-->
+                                            <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1740275935/material-symbols--add-rounded_sughvd.png"/>
+                                        </Grid>
+                                    </Border>
+                                </Viewbox>
+
+                                <Viewbox Grid.Column="0"
+                                         Grid.Row="2" Margin="0,0,-60,0">
+                                    <Border Name="btn_addEmployeeSchedule"
+                                            Background="Black"
+                                            BorderBrush="Black"
+                                            BorderThickness="0"
+                                            CornerRadius="10"
+                                            Width="60"
+                                            Height="60">
+                                        <Border.RenderTransform>
+                                            <!--Change the properties when it is copied-->
+                                            <ScaleTransform x:Name="scaleTransformForaddEmployeeSchedule" />
+                                        </Border.RenderTransform>
+                                        <Border.RenderTransformOrigin>
+                                            <Point X="0.5" Y="0.5"/>
+                                        </Border.RenderTransformOrigin>
+                                        <Border.Triggers>
+                                            <EventTrigger RoutedEvent="MouseEnter">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.2"/>
+                                                        <!--Color change Mouse Hover-->
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                            <EventTrigger RoutedEvent="MouseLeave">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="Black" Duration="0:0:0.2"/>
+                                                        <!--Color change Mouse Leave-->
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                            <EventTrigger RoutedEvent="PreviewMouseDown">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.1"/>
+                                                        <!--Color change Mouse Click-->
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                             To="0.95" Duration="0:0:0.1"/>
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                             To="0.95" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                            <EventTrigger RoutedEvent="PreviewMouseUp">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.1"/>
+                                                        <!--Color change Mouse Release-->
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                             To="1" Duration="0:0:0.1"/>
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                             To="1" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                        </Border.Triggers>
+                                        <Border.Effect>
+                                            <!--Change the blur rad when it is in normal button format (rad into 10)-->
+                                            <DropShadowEffect ShadowDepth="2"
+                                                              BlurRadius="15"
+                                                              Color="Gray"
+                                                              Opacity="0.2"/>
+                                        </Border.Effect>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <!--Image of the button-->
+                                            <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1740275935/clarity--employee-solid_pgvoqe.png" Margin="10,8,10,8"/>
+                                        </Grid>
+                                    </Border>
+                                </Viewbox>
+
+                                <Viewbox Grid.Column="0"
+                                         Grid.Row="4" Margin="0, 0, -60, 0">
+                                    <Border Name="btn_printEmployeeDetails"
+                                            Background="Black"
+                                            BorderBrush="Black"
+                                            BorderThickness="0"
+                                            CornerRadius="10"
+                                            Width="60"
+                                            Height="60">
+                                        <Border.RenderTransform>
+                                            <!--Change the properties when it is copied-->
+                                            <ScaleTransform x:Name="scaleTransformForPrintEmployeeDetails" />
+                                        </Border.RenderTransform>
+                                        <Border.RenderTransformOrigin>
+                                            <Point X="0.5" Y="0.5"/>
+                                        </Border.RenderTransformOrigin>
+                                        <Border.Triggers>
+                                            <EventTrigger RoutedEvent="MouseEnter">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.2"/>
+                                                        <!--Color change Mouse Hover-->
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                            <EventTrigger RoutedEvent="MouseLeave">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="Black" Duration="0:0:0.2"/>
+                                                        <!--Color change Mouse Leave-->
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                            <EventTrigger RoutedEvent="PreviewMouseDown">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.1"/>
+                                                        <!--Color change Mouse Click-->
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                             To="0.95" Duration="0:0:0.1"/>
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                             To="0.95" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                            <EventTrigger RoutedEvent="PreviewMouseUp">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.1"/>
+                                                        <!--Color change Mouse Release-->
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                             To="1" Duration="0:0:0.1"/>
+                                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                             To="1" Duration="0:0:0.1"/>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                        </Border.Triggers>
+                                        <Border.Effect>
+                                            <!--Change the blur rad when it is in normal button format (rad into 10)-->
+                                            <DropShadowEffect ShadowDepth="2"
+                                                              BlurRadius="15"
+                                                              Color="Gray"
+                                                              Opacity="0.2"/>
+                                        </Border.Effect>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <!--Image of the button-->
+                                            <Image Source="https://res.cloudinary.com/dwbw83rrr/image/upload/v1740275935/ic--outline-print_scmwaz.png" Margin="5,5,5,5"/>
+                                        </Grid>
+                                    </Border>
+                                </Viewbox>
+                            </Grid>
+                            <!--Custom Button Grid End-->
+
+
+                            <!--Table Start-->
+                            <Viewbox Grid.Column="1"
+                             Grid.Row="7"
+                             Grid.ColumnSpan="7">
+                                <Border BorderBrush="Transparent"
+                                CornerRadius="3"
+                                Height="357" Width="606">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="#E0E0E0" Offset="0"/>
+                                            <GradientStop Color="#E0E0E0" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="4"
+                                                  BlurRadius="10"
+                                                  Color="Black"
+                                                  Opacity="0.2"/>
+                                    </Border.Effect>
+
+                                    <StackPanel>
+                                        <!-- Column Headers -->
+                                        <StackPanel Orientation="Horizontal" Margin="5" Width="580">
+                                            <TextBlock Text="Product ID" Width="100" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                            <TextBlock Text="Product Name" Width="150" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                            <TextBlock Text="Amount" Width="100" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                            <TextBlock Text="Customer ID" Width="120" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                            <TextBlock Text="Quantity" Width="100" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                        </StackPanel>
+
+                                        <!-- Scrollable Content -->
+                                        <ScrollViewer Height="311" Width="578">
+                                            <StackPanel>
+                                                <Border Background="#FFFFFF" Margin="2" CornerRadius="3">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="P001" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="Laptop" Width="150" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="1200" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="C101" Width="120" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="2" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Border Background="#F5F5F5" Margin="2" CornerRadius="3">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="P002" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="Mouse" Width="150" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="25" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="C102" Width="120" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="5" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Border Background="#FFFFFF" Margin="2" CornerRadius="3">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="P003" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="Keyboard" Width="150" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="45" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="C103" Width="120" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="3" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Border Background="#F5F5F5" Margin="2" CornerRadius="3">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="P004" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="Monitor" Width="150" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="300" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="C104" Width="120" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="1" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                    </StackPanel>
+                                                </Border>
+                                            </StackPanel>
+                                        </ScrollViewer>
+                                    </StackPanel>
+                                </Border>
+                            </Viewbox>
+                            <!--Table End-->
+                        </Grid>
+                        <!--End of Employee sub area-->
                     </Grid>
                 </Viewbox>
             </Grid>
