@@ -158,7 +158,7 @@ namespace SanrooLK.Views.AdminOperations.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SanrooLK;V1.0.0.0;component/views/adminoperations/views/adminviewproduct.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SanrooLK;component/views/adminoperations/views/adminviewproduct.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\Views\AdminOperations\Views\AdminViewProduct.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
