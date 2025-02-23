@@ -37,6 +37,577 @@
                         </Grid.RowDefinitions>
 
                         <UpMenu:UpMenuSales Grid.Column="0" Grid.Row="0"/>
+
+                        <!--Sub Area Start-->
+                        <Grid Grid.Column="0"
+                              Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"></ColumnDefinition>
+                                <ColumnDefinition Width="229"></ColumnDefinition>
+                                <ColumnDefinition Width="59"></ColumnDefinition>
+                                <ColumnDefinition Width="229"></ColumnDefinition>
+                                <ColumnDefinition Width="74"></ColumnDefinition>
+                                <ColumnDefinition Width="189"></ColumnDefinition>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                                <ColumnDefinition Width="109"></ColumnDefinition>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="80"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="17"></RowDefinition>
+                                <RowDefinition Height="39"></RowDefinition>
+                                <RowDefinition Height="17"></RowDefinition>
+                                <RowDefinition Height="61"></RowDefinition>
+                                <RowDefinition Height="31"></RowDefinition>
+                                <RowDefinition Height="17"></RowDefinition>
+                                <RowDefinition Height="11"></RowDefinition>
+                                <RowDefinition Height="46"></RowDefinition>
+                                <RowDefinition Height="26"></RowDefinition>
+                                <RowDefinition Height="570"></RowDefinition>
+                                <RowDefinition Height="106"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <!--Total Product Count-->
+                            <Viewbox Stretch="Uniform"
+                                     Grid.Column="1"
+                                     Grid.Row="1">
+                                <Label Content="Total Product Count: "
+                                       FontFamily="Lucida Fax"
+                                       FontSize="20"
+                                       FontWeight="Bold"/>
+                            </Viewbox>
+                            <Viewbox Stretch="Uniform"
+                                     Grid.Column="2"
+                                     Grid.Row="1" 
+                                     Margin="0,0,196,0"
+                                     Grid.ColumnSpan="2">
+                                <Label Name="lbl_totalProductCount"
+                                       Content="100"
+                                       FontFamily="Lucida Fax"
+                                       FontSize="20"
+                                       FontWeight="Bold"
+                                       HorizontalAlignment="Left" Width="80"/>
+                            </Viewbox>
+
+
+                            <!--Total Available Product Count-->
+                            <Viewbox Stretch="Uniform"
+                                     Grid.Column="5"
+                                     Grid.Row="1"
+                                     Grid.ColumnSpan="2">
+                                <Label Content="Currently Available Count: "
+                                       FontFamily="Lucida Fax"
+                                       FontWeight="Bold"
+                                       FontSize="20"/>
+                            </Viewbox>
+                            <Viewbox Stretch="Uniform"
+                                     Grid.Column="7"
+                                     Grid.Row="1">
+                                <Label Name="lbl_totalAvailableCount"
+                                       Content="198"
+                                       FontFamily="Lucida Fax"
+                                       FontWeight="Bold"
+                                       FontSize="20"/>
+                            </Viewbox>
+
+
+                            <!--Product Count Text Block-->
+                            <Viewbox Stretch="Uniform"
+                                     Grid.Column="1"
+                                     Grid.Row="3"
+                                     Grid.ColumnSpan="5">
+                                <Border Background="White"
+                                        BorderBrush="Black"
+                                        BorderThickness="0"
+                                        CornerRadius="10"
+                                        Width="629"
+                                        Height="50">
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="2"
+                                                          BlurRadius="5"
+                                                          Color="Gray"
+                                                          Opacity="20"/>
+                                    </Border.Effect>
+                                    <TextBox Name="txt_productID"
+                                             HorizontalAlignment="Center" 
+                                             VerticalAlignment="Center" 
+                                             Width="608" 
+                                             Height="40" 
+                                             Padding="0, 5, 0, 5"
+                                             Background="Transparent"
+                                             CaretBrush="#C1C1D2"
+                                             FontFamily="Lucida Fax"
+                                             FontSize="15"
+                                             Foreground="Gray"
+                                             VerticalContentAlignment="Center"
+                                             BorderThickness="0"
+                                             Text="Enter Product ID to View Details"
+                                             GotFocus="txt_productID_GotFocus"
+                                             PreviewTextInput="txt_productID_PreviewTextInput"
+                                             LostFocus="txt_productID_LostFocus"/>
+                                </Border>
+                            </Viewbox>
+
+
+
+                            <!--Search Button-->
+                            <Viewbox Stretch="Uniform"
+                                         Grid.Column="7"
+                                         Grid.ColumnSpan="2"
+                                         Grid.Row="3">
+                                <!--Change the properties when it is copied-->
+                                <!--Change Background Color-->
+                                <Border Name="btn_adminDashboard"
+                                            Background="Black"
+                                            BorderBrush="Black"
+                                            BorderThickness="0"
+                                            CornerRadius="10"
+                                            Width="354"
+                                            Height="69">
+                                    <Border.RenderTransform>
+                                        <!--Change the properties when it is copied-->
+                                        <ScaleTransform x:Name="scaleTransformForadminDashboard" />
+                                    </Border.RenderTransform>
+                                    <Border.RenderTransformOrigin>
+                                        <Point X="0.5" Y="0.5"/>
+                                    </Border.RenderTransformOrigin>
+                                    <Border.Triggers>
+                                        <EventTrigger RoutedEvent="MouseEnter">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.2"/>
+                                                    <!--Color change Mouse Hover-->
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                        <EventTrigger RoutedEvent="MouseLeave">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="Black" Duration="0:0:0.2"/>
+                                                    <!--Color change Mouse Leave-->
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                        <EventTrigger RoutedEvent="PreviewMouseDown">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.1"/>
+                                                    <!--Color change Mouse Click-->
+                                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                             To="0.95" Duration="0:0:0.1"/>
+                                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                             To="0.95" Duration="0:0:0.1"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                        <EventTrigger RoutedEvent="PreviewMouseUp">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.1"/>
+                                                    <!--Color change Mouse Release-->
+                                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                             To="1" Duration="0:0:0.1"/>
+                                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                             To="1" Duration="0:0:0.1"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                    </Border.Triggers>
+                                    <Border.Effect>
+                                        <!--Change the blur rad when it is in normal button format (rad into 10)-->
+                                        <DropShadowEffect ShadowDepth="2"
+                                                              BlurRadius="15"
+                                                              Color="Gray"
+                                                              Opacity="0.2"/>
+                                    </Border.Effect>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <!--Change the text regarding to figma design-->
+                                        <!--Change Font Color-->
+                                        <Label Grid.Column="1"
+                                                   Content="Search"
+                                                   Foreground="White"
+                                                   FontSize="30"
+                                                   FontFamily="Lucida Fax"
+                                                   FontWeight="Bold"
+                                                   HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center" Width="126"/>
+                                    </Grid>
+                                </Border>
+                            </Viewbox>
+
+
+
+
+
+
+
+                            <!--Filter Area-->
+                            <!-- Filter by category -->
+                            <Viewbox Stretch="Uniform" Grid.Column="1" Grid.Row="5" Grid.RowSpan="2">
+                                <Label Content="Category"
+                                       FontFamily="Segoe UI"
+                                       FontWeight="Semibold"
+                                       FontSize="45"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Center"
+                                       Width="577"
+                                       Height="70"/>
+                            </Viewbox>
+
+                            <Viewbox Stretch="Uniform" Grid.Column="1" Grid.Row="7">
+                                <Border Background="White"
+                                        BorderBrush="Gray"
+                                        BorderThickness="0.5"
+                                        CornerRadius="12"
+                                        Padding="8"
+                                        Width="264" Height="52">
+                                    <Grid>
+                                        <!-- TextBlock to show the selected option -->
+                                        <TextBlock x:Name="SelectedOption"
+                                                   Text="Select an Option"
+                                                   FontFamily="Segoe UI"
+                                                   FontSize="18"
+                                                   Foreground="Black"
+                                                   HorizontalAlignment="Left"
+                                                   VerticalAlignment="Center"
+                                                   Margin="16,0,0,0"
+                                                   MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
+                                        <!-- Popup with options -->
+                                        <Popup x:Name="OptionPopupCategory"
+                                               Placement="Bottom"
+                                               StaysOpen="True"
+                                               IsOpen="False"
+                                               VerticalOffset="6">
+                                            <Border Background="White"
+                                                    BorderBrush="Transparent"
+                                                    CornerRadius="15"
+                                                    Width="255"
+                                                    MaxHeight="250">
+                                                <StackPanel>
+                                                    <Button Content="Option 1" Click="OptionButton_Click" Style="{StaticResource {x:Type Button}}"/>
+                                                    <Button Content="Option 2" Click="OptionButton_Click" Style="{StaticResource {x:Type Button}}"/>
+                                                    <Button Content="Option 3" Click="OptionButton_Click" Style="{StaticResource {x:Type Button}}"/>
+                                                    <Button Content="Option 4" Click="OptionButton_Click" Style="{StaticResource {x:Type Button}}"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </Popup>
+                                    </Grid>
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="5"
+                                                          BlurRadius="8"
+                                                          Color="Gray"
+                                                          Opacity="0.2"/>
+                                    </Border.Effect>
+                                </Border>
+                            </Viewbox>
+
+                            <!-- Filter by brand -->
+                            <Viewbox Stretch="Uniform" Grid.Column="3" Grid.Row="5" Grid.RowSpan="2">
+                                <Label Content="Brand"
+                                       FontFamily="Segoe UI"
+                                       FontWeight="Semibold"
+                                       FontSize="45"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Center"
+                                       Width="577"
+                                       Height="70"/>
+                            </Viewbox>
+
+                            <Viewbox Stretch="Uniform" Grid.Column="3" Grid.Row="7">
+                                <Border Background="White"
+                                        BorderBrush="Gray"
+                                        BorderThickness="0.5"
+                                        CornerRadius="12"
+                                        Padding="8"
+                                        Width="264" Height="52">
+                                    <Grid>
+                                        <!-- TextBlock to show the selected option -->
+                                        <TextBlock x:Name="SelectedOptionBrand"
+                                                   Text="Select an Option"
+                                                   FontFamily="Segoe UI"
+                                                   FontSize="18"
+                                                   Foreground="Black"
+                                                   HorizontalAlignment="Left"
+                                                   VerticalAlignment="Center"
+                                                   Margin="50,0,0,0"
+                                                   MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
+                                        <!-- Popup with options -->
+                                        <Popup x:Name="OptionPopupBrand"
+                                               Placement="Bottom"
+                                               StaysOpen="True"
+                                               IsOpen="False"
+                                               VerticalOffset="6">
+                                            <Border Background="White"
+                                                    BorderBrush="Transparent"
+                                                    CornerRadius="15"
+                                                    Width="255"
+                                                    MaxHeight="250">
+                                                <StackPanel>
+                                                    <Button Content="S 1" Click="OptionButton_Click" Style="{StaticResource {x:Type Button}}"/>
+                                                    <Button Content="S 2" Click="OptionButton_Click" Style="{StaticResource {x:Type Button}}"/>
+                                                    <Button Content="S 3" Click="OptionButton_Click" Style="{StaticResource {x:Type Button}}"/>
+                                                    <Button Content="S 4" Click="OptionButton_Click" Style="{StaticResource {x:Type Button}}"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </Popup>
+                                    </Grid>
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="5"
+                                                          BlurRadius="8"
+                                                          Color="Gray"
+                                                          Opacity="0.2"/>
+                                    </Border.Effect>
+                                </Border>
+                            </Viewbox>
+
+                            <!-- Filter by Stock Status -->
+                            <Viewbox Stretch="Uniform" Grid.Column="5" Grid.Row="5" Grid.RowSpan="2">
+                                <Label Content="Stock Status"
+                                       FontFamily="Segoe UI"
+                                       FontWeight="Bold"
+                                       FontSize="45"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Width="577"
+                                       Height="82"/>
+                            </Viewbox>
+
+                            <Viewbox Stretch="Uniform" Grid.Column="5" Grid.Row="7" Grid.ColumnSpan="2">
+                                <Border Background="White"
+                                        BorderBrush="Gray"
+                                        BorderThickness="0.5"
+                                        CornerRadius="12"
+                                        Padding="8"
+                                        Width="325" Height="64">
+                                    <Grid>
+                                        <!-- TextBlock to show the selected option -->
+                                        <TextBlock x:Name="SelectedOptionStockStatus"
+                                                   Text="Select an Option"
+                                                   FontFamily="Segoe UI"
+                                                   FontSize="18"
+                                                   Foreground="Black"
+                                                   HorizontalAlignment="Left"
+                                                   VerticalAlignment="Center"
+                                                   Margin="50,0,0,0"
+                                                   MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
+                                        <!-- Popup with options -->
+                                        <Popup x:Name="OptionPopupStockStatus"
+                                               Placement="Bottom"
+                                               StaysOpen="True"
+                                               IsOpen="False"
+                                               VerticalOffset="6">
+                                            <Border Background="White"
+                                                    BorderBrush="Transparent"
+                                                    CornerRadius="15"
+                                                    Width="255"
+                                                    MaxHeight="250">
+                                                <StackPanel>
+                                                    <Button Content="S 23" Click="OptionButton_Click" Style="{StaticResource {x:Type Button}}"/>
+                                                    <Button Content="S 232" Click="OptionButton_Click" Style="{StaticResource {x:Type Button}}"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </Popup>
+                                    </Grid>
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="5"
+                                                          BlurRadius="8"
+                                                          Color="Gray"
+                                                          Opacity="0.2"/>
+                                    </Border.Effect>
+                                </Border>
+                            </Viewbox>
+
+
+
+                            <!--Find Button-->
+                            <Viewbox Stretch="Uniform"
+                                         Grid.Column="8"
+                                         Grid.Row="7">
+                                <!--Change the properties when it is copied-->
+                                <!--Change Background Color-->
+                                <Border Name="btn_Find"
+                                            Background="Black"
+                                            BorderBrush="Black"
+                                            BorderThickness="0"
+                                            CornerRadius="10"
+                                            Width="379"
+                                            Height="87">
+                                    <Border.RenderTransform>
+                                        <!--Change the properties when it is copied-->
+                                        <ScaleTransform x:Name="scaleTransformForFind" />
+                                    </Border.RenderTransform>
+                                    <Border.RenderTransformOrigin>
+                                        <Point X="0.5" Y="0.5"/>
+                                    </Border.RenderTransformOrigin>
+                                    <Border.Triggers>
+                                        <EventTrigger RoutedEvent="MouseEnter">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.2"/>
+                                                    <!--Color change Mouse Hover-->
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                        <EventTrigger RoutedEvent="MouseLeave">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="Black" Duration="0:0:0.2"/>
+                                                    <!--Color change Mouse Leave-->
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                        <EventTrigger RoutedEvent="PreviewMouseDown">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.1"/>
+                                                    <!--Color change Mouse Click-->
+                                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                             To="0.95" Duration="0:0:0.1"/>
+                                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                             To="0.95" Duration="0:0:0.1"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                        <EventTrigger RoutedEvent="PreviewMouseUp">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="DarkRed" Duration="0:0:0.1"/>
+                                                    <!--Color change Mouse Release-->
+                                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                             To="1" Duration="0:0:0.1"/>
+                                                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                             To="1" Duration="0:0:0.1"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                    </Border.Triggers>
+                                    <Border.Effect>
+                                        <!--Change the blur rad when it is in normal button format (rad into 10)-->
+                                        <DropShadowEffect ShadowDepth="2"
+                                                              BlurRadius="15"
+                                                              Color="Gray"
+                                                              Opacity="0.2"/>
+                                    </Border.Effect>
+
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <!--Change the text regarding to figma design-->
+                                        <!--Change Font Color-->
+                                        <Label Grid.Column="1"
+                                                   Content="Find"
+                                                   Foreground="White"
+                                                   FontSize="30"
+                                                   FontFamily="Lucida Fax"
+                                                   FontWeight="Bold"
+                                                   HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center" Width="76"/>
+                                    </Grid>
+                                </Border>
+                            </Viewbox>
+
+
+                            <Viewbox Stretch="Uniform"
+                                     Grid.Column="1"
+                                     Grid.Row="9"
+                                     Grid.ColumnSpan="8">
+                                <Border BorderBrush="Transparent"
+                                CornerRadius="3"
+                                Height="357" Width="715">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="#E0E0E0" Offset="0"/>
+                                            <GradientStop Color="#E0E0E0" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="4"
+                                                  BlurRadius="10"
+                                                  Color="Black"
+                                                  Opacity="0.2"/>
+                                    </Border.Effect>
+
+                                    <StackPanel>
+                                        <!-- Column Headers -->
+                                        <StackPanel Orientation="Horizontal" Margin="5" Width="695">
+                                            <TextBlock Text="Product ID" Width="100" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                            <TextBlock Text="Product Name" Width="150" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                            <TextBlock Text="Amount" Width="100" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                            <TextBlock Text="Customer ID" Width="120" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                            <TextBlock Text="Quantity" Width="100" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                        </StackPanel>
+                                        <ScrollViewer Height="311" Width="689">
+                                            <StackPanel>
+                                                <Border Background="#FFFFFF" Margin="2" CornerRadius="3">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="P001" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="Laptop" Width="150" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="1200" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="C101" Width="120" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="2" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Border Background="#F5F5F5" Margin="2" CornerRadius="3">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="P002" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="Mouse" Width="150" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="25" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="C102" Width="120" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="5" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Border Background="#FFFFFF" Margin="2" CornerRadius="3">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="P003" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="Keyboard" Width="150" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="45" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="C103" Width="120" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="3" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Border Background="#F5F5F5" Margin="2" CornerRadius="3">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="P004" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="Monitor" Width="150" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="300" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="C104" Width="120" FontFamily="Lucida Fax" Margin="4"/>
+                                                        <TextBlock Text="1" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                    </StackPanel>
+                                                </Border>
+                                            </StackPanel>
+                                        </ScrollViewer>
+
+                                        <!-- Scrollable Content -->
+                                    </StackPanel>
+                                </Border>
+
+                            </Viewbox>
+
+
+
+                        </Grid>
+                        <!--Sub Area End-->
+
                     </Grid>
                 </Viewbox>
             </Grid>

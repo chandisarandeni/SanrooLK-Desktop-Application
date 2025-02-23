@@ -54,7 +54,6 @@ namespace SanrooLK.Views.AdminOperations.Views
 
         private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            // Check which TextBlock was clicked and toggle the corresponding popup visibility
             if (sender == SelectedOption)
             {
                 OptionPopupCategory.IsOpen = !OptionPopupCategory.IsOpen;
@@ -62,6 +61,10 @@ namespace SanrooLK.Views.AdminOperations.Views
             else if (sender == SelectedOptionBrand)
             {
                 OptionPopupBrand.IsOpen = !OptionPopupBrand.IsOpen;
+            }
+            else if (sender == SelectedOptionStockStatus)
+            {
+                OptionPopupStockStatus.IsOpen = !OptionPopupStockStatus.IsOpen;
             }
         }
 
@@ -80,9 +83,11 @@ namespace SanrooLK.Views.AdminOperations.Views
                 SelectedOptionBrand.Text = button.Content.ToString();
                 OptionPopupBrand.IsOpen = false;
             }
+            else if (OptionPopupStockStatus.IsOpen)
+            {
+                SelectedOptionStockStatus.Text = button.Content.ToString();
+                OptionPopupStockStatus.IsOpen = false;
+            }
         }
-
-
-
     }
 }
