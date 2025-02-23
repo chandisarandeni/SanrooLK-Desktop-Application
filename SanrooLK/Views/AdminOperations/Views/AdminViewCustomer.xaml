@@ -104,7 +104,7 @@
                                                           Color="Gray"
                                                           Opacity="20"/>
                                     </Border.Effect>
-                                    <TextBox Name="txt_employeeID"
+                                    <TextBox Name="txt_customerID"
                                              HorizontalAlignment="Center" 
                                              VerticalAlignment="Center" 
                                              Width="608" 
