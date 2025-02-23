@@ -276,21 +276,22 @@
 
                     <!--Recent Sales Details-->
                     <Viewbox Grid.Column="1"
-         Grid.Row="7"
-         Grid.ColumnSpan="2">
+                             Grid.Row="7"
+                             Grid.ColumnSpan="2">
                         <Label Content="Recent Sales Details"
-           FontFamily="Lucida Fax"
-           FontSize="30"
-           FontWeight="Black"
-           Margin="4"/>
+                               FontFamily="Lucida Fax"
+                               FontSize="30"
+                               FontWeight="Black"
+                               Margin="4"/>
                     </Viewbox>
 
+                    <!--Table Start-->
                     <Viewbox Grid.Column="1"
-         Grid.Row="9"
-         Grid.ColumnSpan="8">
+                             Grid.Row="9"
+                             Grid.ColumnSpan="8">
                         <Border BorderBrush="Transparent"
-            CornerRadius="3"
-            Height="250" Width="606">
+                                CornerRadius="3"
+                                Height="250" Width="606">
                             <Border.Background>
                                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                                     <GradientStop Color="#E0E0E0" Offset="0"/>
@@ -300,9 +301,9 @@
 
                             <Border.Effect>
                                 <DropShadowEffect ShadowDepth="4"
-                              BlurRadius="10"
-                              Color="Black"
-                              Opacity="0.2"/>
+                                                  BlurRadius="10"
+                                                  Color="Black"
+                                                  Opacity="0.2"/>
                             </Border.Effect>
 
                             <StackPanel>
@@ -362,6 +363,7 @@
                             </StackPanel>
                         </Border>
                     </Viewbox>
+                    <!--Table End-->
 
 
 
