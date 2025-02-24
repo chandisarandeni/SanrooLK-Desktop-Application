@@ -26,7 +26,7 @@
                 <Common:MenuBarReport Grid.Column="0" Grid.Row="0"/>
 
                 <Viewbox Grid.Column="1"
-         Grid.Row="0">
+                         Grid.Row="0">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1289"></ColumnDefinition>
@@ -37,6 +37,12 @@
                         </Grid.RowDefinitions>
 
                         <UpMenu:UpMenuReports Grid.Column="0" Grid.Row="0"/>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
                     </Grid>
                 </Viewbox>
             </Grid>
