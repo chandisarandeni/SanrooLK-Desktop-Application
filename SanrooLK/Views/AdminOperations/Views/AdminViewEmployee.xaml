@@ -80,13 +80,14 @@
                                      Grid.Column="2"
                                      Grid.Row="1">
                                 <Label Name="lbl_totalEmployeeCount"
-                                       Content="12"
+                                       Content="{Binding EmployeeCount}"
                                        FontFamily="Lucida Fax"
                                        FontWeight="Bold"
                                        HorizontalAlignment="Left"/>
                             </Viewbox>
 
-                            <!--Employee Count Text Block-->
+
+                            <!--Employee Search Text Block-->
                             <Viewbox Stretch="Uniform"
                                      Grid.Column="1"
                                      Grid.Row="3"
@@ -122,7 +123,7 @@
                                              LostFocus="txt_employeeID_LostFocus"/>
                                 </Border>
                             </Viewbox>
-
+                            <!--Employee Search End-->
 
                             <!--Search Button-->
                             <Grid Grid.Column="7"
@@ -137,7 +138,7 @@
                                          Grid.RowSpan="3">
                                     <!--Change the properties when it is copied-->
                                     <!--Change Background Color-->
-                                    <Border Name="btn_adminDashboard"
+                                    <Border MouseLeftButtonDown="SearchLabel_Click"
                                             Background="Black"
                                             BorderBrush="Black"
                                             BorderThickness="0"
@@ -179,7 +180,7 @@
                                                         <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
                                              To="0.95" Duration="0:0:0.1"/>
                                                         <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                             To="0.95" Duration="0:0:0.1"/>
+                                                                         To="0.95" Duration="0:0:0.1"/>
                                                     </Storyboard>
                                                 </BeginStoryboard>
                                             </EventTrigger>
@@ -187,12 +188,12 @@
                                                 <BeginStoryboard>
                                                     <Storyboard>
                                                         <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                            To="DarkRed" Duration="0:0:0.1"/>
+                                                                        To="DarkRed" Duration="0:0:0.1"/>
                                                         <!--Color change Mouse Release-->
                                                         <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                             To="1" Duration="0:0:0.1"/>
+                                                                         To="1" Duration="0:0:0.1"/>
                                                         <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                             To="1" Duration="0:0:0.1"/>
+                                                                         To="1" Duration="0:0:0.1"/>
                                                     </Storyboard>
                                                 </BeginStoryboard>
                                             </EventTrigger>
@@ -225,7 +226,8 @@
                                     </Border>
                                 </Viewbox>
                             </Grid>
-                            
+
+
                             <!--Employee Details Area-->
                             <Viewbox Grid.Column="1"
                                      Grid.Row="5">
@@ -249,7 +251,7 @@
                                     <RowDefinition Height="397"></RowDefinition>
                                     <RowDefinition Height="60"></RowDefinition>
                                 </Grid.RowDefinitions>
-                                
+
                                 <!--Custom Button Area-->
                                 <!--Add Employee Button-->
                                 <Viewbox Grid.Column="0"
@@ -499,7 +501,7 @@
                             <!--Custom Button Grid End-->
 
 
-                            <!--Table Start-->
+                            <!-- Table Start -->
                             <Viewbox Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="7">
                                 <Border BorderBrush="Transparent" CornerRadius="3" Height="357" Width="606">
                                     <Border.Background>
@@ -550,7 +552,7 @@
                                     </StackPanel>
                                 </Border>
                             </Viewbox>
-                            <!--Table End-->
+                            <!-- Table End -->
 
                         </Grid>
                         <!--End of Employee sub area-->

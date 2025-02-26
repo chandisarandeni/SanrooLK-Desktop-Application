@@ -1,10 +1,9 @@
-﻿using MongoDB.Bson;
-using MongoDB.Driver;
-using System;
-using System.Collections.ObjectModel;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
+using System.Collections.ObjectModel;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using SanrooLK.Models;
 
 namespace SanrooLK.Views.AdminOperations.Views
 {
@@ -13,27 +12,34 @@ namespace SanrooLK.Views.AdminOperations.Views
         private static string connectionString = "mongodb+srv://DesktopClient:6uJegLlg5cjVy5GS@sanroolk.xxwnk.mongodb.net/?retryWrites=true&w=majority&appName=SanrooLK";
         private static string databaseName = "SanrooLKDB";
         private static string collectionName = "Employee";
-        private readonly IMongoCollection<BsonDocument> collection;
+        private IMongoCollection<BsonDocument> collection;  // Removed readonly here
 
         public ObservableCollection<Employee> Employees { get; set; }
+        public int EmployeeCount { get; set; } // Add EmployeeCount property
+
+        private SearchEmployee searchEmployee;
 
         public AdminViewEmployee()
         {
             InitializeComponent();
+            searchEmployee = new SearchEmployee();
+            Employees = new ObservableCollection<Employee>();
+
+            // Initialize collection inside the constructor
             var client = new MongoClient(connectionString);
             var database = client.GetDatabase(databaseName);
             collection = database.GetCollection<BsonDocument>(collectionName);
 
-            Employees = new ObservableCollection<Employee>();
             LoadData();
-            DataContext = this;
+            DataContext = this; // Bind the data context to this class for data binding
         }
 
         private void LoadData()
         {
-            var sort = Builders<BsonDocument>.Sort.Descending("employeeID"); // Change "employeeID" to your desired field
+            var sort = Builders<BsonDocument>.Sort.Descending("employeeID");
             var documents = collection.Find(new BsonDocument()).Sort(sort).ToList();
 
+            Employees.Clear(); // Clear existing employees
             foreach (var doc in documents)
             {
                 Employees.Add(new Employee
@@ -44,15 +50,27 @@ namespace SanrooLK.Views.AdminOperations.Views
                     Contact = doc.Contains("employeeContact") ? doc["employeeContact"].AsString : ""
                 });
             }
+
+            // Update the EmployeeCount property after loading data
+            EmployeeCount = Employees.Count;
+            // Notify UI to update binding
+            OnPropertyChanged("EmployeeCount");
         }
 
+        // Method to notify UI that a property has changed
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+        }
 
         private void txt_employeeID_GotFocus(object sender, RoutedEventArgs e)
         {
             if (txt_employeeID.Text == "Enter Employee ID or NIC to View Details")
             {
                 txt_employeeID.Text = "";
-                txt_employeeID.Foreground = Brushes.Black;
+                txt_employeeID.Foreground = System.Windows.Media.Brushes.Black;
             }
         }
 
@@ -61,7 +79,7 @@ namespace SanrooLK.Views.AdminOperations.Views
             if (txt_employeeID.Text == "Enter Employee ID or NIC to View Details")
             {
                 txt_employeeID.Text = "";
-                txt_employeeID.Foreground = Brushes.Black;
+                txt_employeeID.Foreground = System.Windows.Media.Brushes.Black;
             }
         }
 
@@ -70,7 +88,7 @@ namespace SanrooLK.Views.AdminOperations.Views
             if (string.IsNullOrWhiteSpace(txt_employeeID.Text))
             {
                 txt_employeeID.Text = "Enter Employee ID or NIC to View Details";
-                txt_employeeID.Foreground = Brushes.Gray;
+                txt_employeeID.Foreground = System.Windows.Media.Brushes.Gray;
             }
         }
 
@@ -80,7 +98,6 @@ namespace SanrooLK.Views.AdminOperations.Views
             var employee = button?.CommandParameter as Employee;
             if (employee != null)
             {
-                // Logic to view employee details
                 MessageBox.Show($"View details for {employee.EmployeeName} ({employee.EmployeeID})");
             }
         }
@@ -91,7 +108,6 @@ namespace SanrooLK.Views.AdminOperations.Views
             var employee = button?.CommandParameter as Employee;
             if (employee != null)
             {
-                // Logic to update employee details
                 MessageBox.Show($"Update details for {employee.EmployeeName} ({employee.EmployeeID})");
             }
         }
@@ -102,19 +118,49 @@ namespace SanrooLK.Views.AdminOperations.Views
             var employee = button?.CommandParameter as Employee;
             if (employee != null)
             {
-                // Logic to delete employee
                 MessageBox.Show($"Delete employee {employee.EmployeeName} ({employee.EmployeeID})");
             }
         }
 
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            var searchText = txt_employeeID.Text;
+            searchEmployee.SearchEmployees(searchText); // Search employees by ID or NIC
+            Employees.Clear();
+            foreach (var emp in searchEmployee.Employees)
+            {
+                Employees.Add(emp); // Add filtered employees to the collection
+            }
+        }
 
-    }
+        private async void SearchLabel_Click(object sender, RoutedEventArgs e)
+        {
+            var searchText = txt_employeeID.Text;
 
-    public class Employee
-    {
-        public string EmployeeID { get; set; }
-        public string EmployeeName { get; set; }
-        public string NIC { get; set; }
-        public string Contact { get; set; }
+            // Check if the search text is empty
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                MessageBox.Show("Please Enter Valid Employee ID or NIC", "", MessageBoxButton.OK, MessageBoxImage.Information);
+                return; // Exit the method if the input is invalid
+            }
+            else if (searchText == "Enter Employee ID or NIC to View Details")
+            {
+                MessageBox.Show("Please Enter Valid Employee ID or NIC", "", MessageBoxButton.OK, MessageBoxImage.Information);
+                return; // Exit the method if the input is invalid
+            }
+
+            // Perform the search
+            searchEmployee.SearchEmployees(searchText);
+            Employees.Clear();
+
+            // Add delay for button click feedback
+            await Task.Delay(200);
+
+            // Add the filtered employees to the collection
+            foreach (var emp in searchEmployee.Employees)
+            {
+                Employees.Add(emp);
+            }
+        }
     }
 }
