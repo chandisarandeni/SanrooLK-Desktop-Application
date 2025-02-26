@@ -99,8 +99,8 @@
                                 <!--Change the text regarding to figma design-->
                                 <!--Change Font Color-->
                                 <Label Name="lbl_totalRegisteredCustomers"
+                                       Content="{Binding CustomerCount}"
                                        Grid.Column="1"
-                                       Content="102"
                                        Foreground="Black"
                                        FontSize="40"
                                        FontFamily="Lucida Fax"
@@ -147,8 +147,8 @@
                                 <!--Change the text regarding to figma design-->
                                 <!--Change Font Color-->
                                 <Label Name="lbl_TotalEmployeeCount"
+                                       Content="{Binding EmployeeCount}"
                                        Grid.Column="1"
-                                       Content="23"
                                        Foreground="Black"
                                        FontSize="40"
                                        FontFamily="Lucida Fax"
