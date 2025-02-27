@@ -132,6 +132,7 @@
 
 
                                 <Viewbox Stretch="Uniform"
+                                         Name="btn_Search"
                                          Grid.Column="0"
                                          Grid.ColumnSpan="5"
                                          Grid.Row="0"

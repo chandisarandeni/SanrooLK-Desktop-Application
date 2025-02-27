@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using SanrooLK.Models;
+using System.Windows.Input;
 
 namespace SanrooLK.Views.AdminOperations.Views
 {
@@ -22,6 +23,9 @@ namespace SanrooLK.Views.AdminOperations.Views
         public AdminViewEmployee()
         {
             InitializeComponent();
+
+            txt_employeeID.KeyDown += txt_employeeID_KeyDown;
+
             searchEmployee = new SearchEmployee();
             Employees = new ObservableCollection<Employee>();
 
@@ -154,12 +158,20 @@ namespace SanrooLK.Views.AdminOperations.Views
             Employees.Clear();
 
             // Add delay for button click feedback
-            await Task.Delay(200);
+            //await Task.Delay(200);
 
             // Add the filtered employees to the collection
             foreach (var emp in searchEmployee.Employees)
             {
                 Employees.Add(emp);
+            }
+        }
+
+        private void txt_employeeID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                SearchButton_Click(sender, e);
             }
         }
     }
