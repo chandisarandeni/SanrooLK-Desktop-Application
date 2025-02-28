@@ -78,51 +78,51 @@
                             <Viewbox Stretch="Uniform"
                                      Grid.Column="2"
                                      Grid.Row="1">
-                                <Label Name="lbl_totalEmployeeCount"
-                                       Content="{Binding EmployeeCount}"
+                                <Label Name="lbl_totalCustomerCount"
+                                       Content="{Binding CustomerCount}"
                                        FontFamily="Lucida Fax"
                                        FontWeight="Bold"
                                        HorizontalAlignment="Left"/>
                             </Viewbox>
 
 
-                            <!--Employee Search Text Block-->
+                            <!--Customer Search Text Block-->
                             <Viewbox Stretch="Uniform"
-                                     Grid.Column="1"
-                                     Grid.Row="3"
-                                     Grid.ColumnSpan="5">
+         Grid.Column="1"
+         Grid.Row="3"
+         Grid.ColumnSpan="5">
                                 <Border Background="White"
-                                        BorderBrush="Black"
-                                        BorderThickness="0"
-                                        CornerRadius="10"
-                                        Width="629"
-                                        Height="50">
+            BorderBrush="Black"
+            BorderThickness="0"
+            CornerRadius="10"
+            Width="629"
+            Height="50">
                                     <Border.Effect>
                                         <DropShadowEffect ShadowDepth="2"
-                                                          BlurRadius="5"
-                                                          Color="Gray"
-                                                          Opacity="20"/>
+                              BlurRadius="5"
+                              Color="Gray"
+                              Opacity="20"/>
                                     </Border.Effect>
-                                    <TextBox Name="txt_employeeID"
-                                             HorizontalAlignment="Center" 
-                                             VerticalAlignment="Center" 
-                                             Width="608" 
-                                             Height="40" 
-                                             Padding="0, 5, 0, 5"
-                                             Background="Transparent"
-                                             CaretBrush="#C1C1D2"
-                                             FontFamily="Lucida Fax"
-                                             FontSize="15"
-                                             Foreground="Gray"
-                                             VerticalContentAlignment="Center"
-                                             BorderThickness="0"
-                                             Text="Enter Employee ID or NIC to View Details"
-                                             GotFocus="txt_employeeID_GotFocus"
-                                             PreviewTextInput="txt_employeeID_PreviewTextInput"
-                                             LostFocus="txt_employeeID_LostFocus"/>
+                                    <TextBox Name="txt_customerID"
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Center" 
+                 Width="608" 
+                 Height="40" 
+                 Padding="0, 5, 0, 5"
+                 Background="Transparent"
+                 CaretBrush="#C1C1D2"
+                 FontFamily="Lucida Fax"
+                 FontSize="15"
+                 Foreground="Gray"
+                 VerticalContentAlignment="Center"
+                 BorderThickness="0"
+                 Text="Enter Customer ID or Contact to View Details"
+                 GotFocus="txt_customerID_GotFocus"
+                 LostFocus="txt_customerID_LostFocus"/>
                                 </Border>
                             </Viewbox>
-                            <!--Employee Search End-->
+                            <!--Customer Search End-->
+
 
                             <!--Search Button-->
                             <Grid Grid.Column="7"
@@ -518,8 +518,8 @@
                                     <StackPanel>
                                         <!-- Column Headers -->
                                         <StackPanel Orientation="Horizontal" Margin="5" Width="580">
-                                            <TextBlock Text="Employee ID" Width="100" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
-                                            <TextBlock Text="Employee Name" Width="150" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                            <TextBlock Text="Customer ID" Width="100" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                            <TextBlock Text="Customer Name" Width="150" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
                                             <TextBlock Text="NIC" Width="120" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
                                             <TextBlock Text="Contact" Width="100" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
                                             <TextBlock Text="Actions" Width="150" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
@@ -528,19 +528,19 @@
                                         <!-- Scrollable Content -->
                                         <ScrollViewer Height="311" Width="578">
                                             <StackPanel>
-                                                <ItemsControl ItemsSource="{Binding Employees}">
+                                                <ItemsControl ItemsSource="{Binding Customers}">
                                                     <ItemsControl.ItemTemplate>
                                                         <DataTemplate>
                                                             <Border Background="#FFFFFF" Margin="2" CornerRadius="3">
                                                                 <StackPanel Orientation="Horizontal">
-                                                                    <TextBlock Text="{Binding EmployeeID}" Width="100" FontFamily="Lucida Fax" Margin="4"/>
-                                                                    <TextBlock Text="{Binding EmployeeName}" Width="150" FontFamily="Lucida Fax" Margin="4"/>
-                                                                    <TextBlock Text="{Binding NIC}" Width="120" FontFamily="Lucida Fax" Margin="4"/>
-                                                                    <TextBlock Text="{Binding Contact}" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                                    <TextBlock Text="{Binding CustomerID}" Width="100" FontFamily="Lucida Fax" Margin="4"/>
+                                                                    <TextBlock Text="{Binding CustomerName}" Width="150" FontFamily="Lucida Fax" Margin="4"/>
+                                                                    <TextBlock Text="{Binding CustomerNIC}" Width="120" FontFamily="Lucida Fax" Margin="4"/>
+                                                                    <TextBlock Text="{Binding CustomerContact}" Width="100" FontFamily="Lucida Fax" Margin="4"/>
                                                                     <StackPanel Orientation="Horizontal">
-                                                                        <Button Content="View" Width="50" Margin="4" CommandParameter="{Binding}" Click="ViewEmployee_Click"/>
-                                                                        <Button Content="Update" Width="50" Margin="4" CommandParameter="{Binding}" Click="UpdateEmployee_Click"/>
-                                                                        <Button Content="Delete" Width="50" Margin="4" CommandParameter="{Binding}" Click="DeleteEmployee_Click"/>
+                                                                        <Button Content="View" Width="50" Margin="4" CommandParameter="{Binding}" Click="ViewCustomer_Click"/>
+                                                                        <Button Content="Update" Width="50" Margin="4" CommandParameter="{Binding}" Click="UpdateCustomer_Click"/>
+                                                                        <Button Content="Delete" Width="50" Margin="4" CommandParameter="{Binding}" Click="DeleteCustomer_Click"/>
                                                                     </StackPanel>
                                                                 </StackPanel>
                                                             </Border>
@@ -553,6 +553,7 @@
                                 </Border>
                             </Viewbox>
                             <!-- Table End -->
+
 
                         </Grid>
                         <!--End of Employee sub area-->
