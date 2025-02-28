@@ -524,14 +524,8 @@
                                 </Border>
                             </Viewbox>
 
-
-                            <Viewbox Stretch="Uniform"
-                                     Grid.Column="1"
-                                     Grid.Row="9"
-                                     Grid.ColumnSpan="8">
-                                <Border BorderBrush="Transparent"
-                                CornerRadius="3"
-                                Height="357" Width="715">
+                            <Viewbox Stretch="Uniform" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="8">
+                                <Border BorderBrush="Transparent" CornerRadius="3" Height="357" Width="715">
                                     <Border.Background>
                                         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                                             <GradientStop Color="#E0E0E0" Offset="0"/>
@@ -540,70 +534,42 @@
                                     </Border.Background>
 
                                     <Border.Effect>
-                                        <DropShadowEffect ShadowDepth="4"
-                                                  BlurRadius="10"
-                                                  Color="Black"
-                                                  Opacity="0.2"/>
+                                        <DropShadowEffect ShadowDepth="4" BlurRadius="10" Color="Black" Opacity="0.2"/>
                                     </Border.Effect>
 
                                     <StackPanel>
                                         <!-- Column Headers -->
                                         <StackPanel Orientation="Horizontal" Margin="5" Width="695">
-                                            <TextBlock Text="Product ID" Width="100" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
-                                            <TextBlock Text="Product Name" Width="150" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
-                                            <TextBlock Text="Amount" Width="100" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
-                                            <TextBlock Text="Customer ID" Width="120" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
-                                            <TextBlock Text="Quantity" Width="100" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                            <TextBlock Text="Product ID" Width="120" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                            <TextBlock Text="Product Name" Width="180" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                            <TextBlock Text="Category" Width="140" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                            <TextBlock Text="Brand" Width="120" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
                                         </StackPanel>
-                                        <ScrollViewer Height="311" Width="689">
-                                            <StackPanel>
-                                                <Border Background="#FFFFFF" Margin="2" CornerRadius="3">
-                                                    <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="P001" Width="100" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="Laptop" Width="150" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="1200" Width="100" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="C101" Width="120" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="2" Width="100" FontFamily="Lucida Fax" Margin="4"/>
-                                                    </StackPanel>
-                                                </Border>
-
-                                                <Border Background="#F5F5F5" Margin="2" CornerRadius="3">
-                                                    <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="P002" Width="100" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="Mouse" Width="150" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="25" Width="100" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="C102" Width="120" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="5" Width="100" FontFamily="Lucida Fax" Margin="4"/>
-                                                    </StackPanel>
-                                                </Border>
-
-                                                <Border Background="#FFFFFF" Margin="2" CornerRadius="3">
-                                                    <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="P003" Width="100" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="Keyboard" Width="150" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="45" Width="100" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="C103" Width="120" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="3" Width="100" FontFamily="Lucida Fax" Margin="4"/>
-                                                    </StackPanel>
-                                                </Border>
-
-                                                <Border Background="#F5F5F5" Margin="2" CornerRadius="3">
-                                                    <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="P004" Width="100" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="Monitor" Width="150" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="300" Width="100" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="C104" Width="120" FontFamily="Lucida Fax" Margin="4"/>
-                                                        <TextBlock Text="1" Width="100" FontFamily="Lucida Fax" Margin="4"/>
-                                                    </StackPanel>
-                                                </Border>
-                                            </StackPanel>
-                                        </ScrollViewer>
 
                                         <!-- Scrollable Content -->
+                                        <ScrollViewer Height="311" Width="689">
+                                            <StackPanel>
+                                                <!-- Bind the list of products dynamically -->
+                                                <ItemsControl ItemsSource="{Binding Products}">
+                                                    <ItemsControl.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <Border Background="White" Margin="2" CornerRadius="3">
+                                                                <StackPanel Orientation="Horizontal">
+                                                                    <TextBlock Text="{Binding ProductID}" Width="120" FontFamily="Lucida Fax" Margin="4"/>
+                                                                    <TextBlock Text="{Binding ProductName}" Width="180" FontFamily="Lucida Fax" Margin="4"/>
+                                                                    <TextBlock Text="{Binding ProductCategory}" Width="140" FontFamily="Lucida Fax" Margin="4"/>
+                                                                    <TextBlock Text="{Binding ProductBrand}" Width="120" FontFamily="Lucida Fax" Margin="4"/>
+                                                                </StackPanel>
+                                                            </Border>
+                                                        </DataTemplate>
+                                                    </ItemsControl.ItemTemplate>
+                                                </ItemsControl>
+                                            </StackPanel>
+                                        </ScrollViewer>
                                     </StackPanel>
                                 </Border>
-
                             </Viewbox>
+
 
 
 
