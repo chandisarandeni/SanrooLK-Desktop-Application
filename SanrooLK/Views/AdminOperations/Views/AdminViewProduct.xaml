@@ -160,6 +160,7 @@
                                 <!--Change the properties when it is copied-->
                                 <!--Change Background Color-->
                                 <Border Name="btn_adminDashboard"
+                                        MouseDown="btn_Search_PreviewMouseDown"
                                             Background="Black"
                                             BorderBrush="Black"
                                             BorderThickness="0"
@@ -544,6 +545,7 @@
                                             <TextBlock Text="Product Name" Width="180" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
                                             <TextBlock Text="Category" Width="140" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
                                             <TextBlock Text="Brand" Width="120" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
+                                            <TextBlock Text="Actions" Width="100" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4"/>
                                         </StackPanel>
 
                                         <!-- Scrollable Content -->
@@ -559,6 +561,7 @@
                                                                     <TextBlock Text="{Binding ProductName}" Width="180" FontFamily="Lucida Fax" Margin="4"/>
                                                                     <TextBlock Text="{Binding ProductCategory}" Width="140" FontFamily="Lucida Fax" Margin="4"/>
                                                                     <TextBlock Text="{Binding ProductBrand}" Width="120" FontFamily="Lucida Fax" Margin="4"/>
+                                                                    <Button Content="View" Width="80" Margin="4" Command="{Binding DataContext.ViewProductCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding}"/>
                                                                 </StackPanel>
                                                             </Border>
                                                         </DataTemplate>
@@ -569,6 +572,7 @@
                                     </StackPanel>
                                 </Border>
                             </Viewbox>
+
 
 
 

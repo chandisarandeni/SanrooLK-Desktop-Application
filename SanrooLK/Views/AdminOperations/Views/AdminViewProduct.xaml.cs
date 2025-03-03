@@ -208,5 +208,10 @@ namespace SanrooLK.Views.AdminOperations.Views
         {
             PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
         }
+        private void btn_Search_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            LoadData(); // Trigger search based on entered text
+        }
+
     }
 }
