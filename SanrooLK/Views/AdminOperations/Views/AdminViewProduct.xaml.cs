@@ -30,6 +30,8 @@ namespace SanrooLK.Views.AdminOperations.Views
         {
             InitializeComponent();
 
+            txt_productID.KeyDown += txt_customerID_KeyDown;
+
             txt_productID.GotFocus += txt_productID_GotFocus;
             txt_productID.LostFocus += txt_productID_LostFocus;
             txt_productID.PreviewTextInput += txt_productID_PreviewTextInput;
@@ -213,5 +215,12 @@ namespace SanrooLK.Views.AdminOperations.Views
             LoadData(); // Trigger search based on entered text
         }
 
+        private void txt_customerID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                SearchButton_Click(sender, e);
+            }
+        }
     }
 }

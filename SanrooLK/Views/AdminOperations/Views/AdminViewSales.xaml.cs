@@ -90,5 +90,10 @@ namespace SanrooLK.Views.AdminOperations.Views
                 OptionPopupStockStatus.IsOpen = false;
             }
         }
+
+        private void MenuBarSales_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
