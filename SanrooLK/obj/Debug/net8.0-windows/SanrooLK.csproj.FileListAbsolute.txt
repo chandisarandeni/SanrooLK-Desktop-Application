@@ -102,3 +102,5 @@ C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\Sanro
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuMaintenance.baml
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuReports.baml
 C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Common\UpMenuSettings.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Views\EmployeeDetailsControl.baml
+C:\Users\chand\OneDrive\Desktop\GitHub Clones\SanrooLK-Desktop-Application\SanrooLK\obj\Debug\net8.0-windows\Views\AdminOperations\Views\EmployeeDetailsControl.g.cs

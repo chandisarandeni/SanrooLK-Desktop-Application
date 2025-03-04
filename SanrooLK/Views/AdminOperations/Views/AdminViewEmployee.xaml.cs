@@ -13,7 +13,7 @@ namespace SanrooLK.Views.AdminOperations.Views
         private static string connectionString = "mongodb+srv://DesktopClient:6uJegLlg5cjVy5GS@sanroolk.xxwnk.mongodb.net/?retryWrites=true&w=majority&appName=SanrooLK";
         private static string databaseName = "SanrooLKDB";
         private static string collectionName = "Employee";
-        private IMongoCollection<BsonDocument> collection;  // Removed readonly here
+        private IMongoCollection<BsonDocument> collection;
 
         public ObservableCollection<Employee> Employees { get; set; }
         public int EmployeeCount { get; set; } // Add EmployeeCount property
@@ -37,6 +37,7 @@ namespace SanrooLK.Views.AdminOperations.Views
             LoadData();
             DataContext = this; // Bind the data context to this class for data binding
         }
+
 
         private void LoadData()
         {
@@ -96,16 +97,6 @@ namespace SanrooLK.Views.AdminOperations.Views
             }
         }
 
-        private void ViewEmployee_Click(object sender, RoutedEventArgs e)
-        {
-            var button = sender as Button;
-            var employee = button?.CommandParameter as Employee;
-            if (employee != null)
-            {
-                MessageBox.Show($"View details for {employee.EmployeeName} ({employee.EmployeeID})");
-            }
-        }
-
         private void UpdateEmployee_Click(object sender, RoutedEventArgs e)
         {
             var button = sender as Button;
@@ -157,9 +148,6 @@ namespace SanrooLK.Views.AdminOperations.Views
             searchEmployee.SearchEmployees(searchText);
             Employees.Clear();
 
-            // Add delay for button click feedback
-            //await Task.Delay(200);
-
             // Add the filtered employees to the collection
             foreach (var emp in searchEmployee.Employees)
             {
@@ -174,5 +162,33 @@ namespace SanrooLK.Views.AdminOperations.Views
                 SearchButton_Click(sender, e);
             }
         }
+
+        // Merge the two ViewEmployee_Click methods into one
+        private void ViewEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            var employee = button?.CommandParameter as Employee;
+
+            if (employee != null)
+            {
+                // Pass employee data to EmployeeDetailsControl
+                var employeeDetailsControl = new EmployeeDetailsControl(employee);
+
+                var window = new Window
+                {
+                    Title = $"Details for {employee.EmployeeName}",
+                    Content = employeeDetailsControl,
+                    Width = 900, // Match MinWidth of UserControl
+                    Height = 750, // Match MinHeight of UserControl
+                    WindowStartupLocation = WindowStartupLocation.CenterScreen,
+                    ResizeMode = ResizeMode.NoResize,
+                    Owner = Window.GetWindow(this) // Makes it a floating window
+                };
+
+                window.ShowDialog(); // Opens the window as a modal dialog
+            }
+        }
+
+
     }
 }

@@ -88,6 +88,9 @@
     <Compile Update="Views\AdminOperations\Views\AdminViewSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\AdminOperations\Views\EmployeeDetailsControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\MainFrames\ForgotPassword.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -178,6 +181,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AdminOperations\Views\AdminViewSettings.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminOperations\Views\EmployeeDetailsControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainFrames\ForgotPassword.xaml">

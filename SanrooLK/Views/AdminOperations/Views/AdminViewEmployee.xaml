@@ -540,8 +540,6 @@
                                                                     <TextBlock Text="{Binding Contact}" Width="100" FontFamily="Lucida Fax" Margin="4"/>
                                                                     <StackPanel Orientation="Horizontal">
                                                                         <Button Content="View" Width="50" Margin="4" CommandParameter="{Binding}" Click="ViewEmployee_Click"/>
-                                                                        <Button Content="Update" Width="50" Margin="4" CommandParameter="{Binding}" Click="UpdateEmployee_Click"/>
-                                                                        <Button Content="Delete" Width="50" Margin="4" CommandParameter="{Binding}" Click="DeleteEmployee_Click"/>
                                                                     </StackPanel>
                                                                 </StackPanel>
                                                             </Border>
