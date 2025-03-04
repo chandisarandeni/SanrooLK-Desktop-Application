@@ -119,5 +119,17 @@ namespace SanrooLK.Views.AdminOperations.Views
                 OptionPopupStockStatus.IsOpen = false;
             }
         }
+
+
+        //View button click
+        private void ViewButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.DataContext is Inquiry inquiry)
+            {
+                MessageBox.Show($"Inquiry Details:\n\nID: {inquiry.InquiryID}\nDescription: {inquiry.InquiryDescription}\nDate: {inquiry.InquiryDate:d}\nStatus: {inquiry.InquiryStatus}\nCustomer ID: {inquiry.CustomerID}",
+                                "Inquiry Details", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
     }
 }

@@ -1,9 +1,11 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
 using SanrooLK.Models;
+using SanrooLK.Views.AdminOperations.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,7 +13,7 @@ using System.Windows.Input;
 
 namespace SanrooLK.Views.AdminOperations.Views
 {
-    public partial class AdminViewCustomer : UserControl
+    public partial class AdminViewCustomer : UserControl, INotifyPropertyChanged
     {
         private static string connectionString = "mongodb+srv://DesktopClient:6uJegLlg5cjVy5GS@sanroolk.xxwnk.mongodb.net/?retryWrites=true&w=majority&appName=SanrooLK";
         private static string databaseName = "SanrooLKDB";
@@ -19,14 +21,25 @@ namespace SanrooLK.Views.AdminOperations.Views
         private IMongoCollection<BsonDocument> collection;
 
         public ObservableCollection<Customer> Customers { get; set; }
-        public int CustomerCount { get; set; }
+        private int _customerCount;
+        public int CustomerCount
+        {
+            get { return _customerCount; }
+            set
+            {
+                if (_customerCount != value)
+                {
+                    _customerCount = value;
+                    OnPropertyChanged(nameof(CustomerCount)); // Notify UI on property change
+                }
+            }
+        }
 
         private SearchCustomer searchCustomer;
 
         public AdminViewCustomer()
         {
             InitializeComponent();
-
             txt_customerID.KeyDown += txt_customerID_KeyDown;
 
             searchCustomer = new SearchCustomer();
@@ -37,7 +50,7 @@ namespace SanrooLK.Views.AdminOperations.Views
             collection = database.GetCollection<BsonDocument>(collectionName);
 
             LoadData();
-            DataContext = this;
+            DataContext = this; // Bind DataContext
         }
 
         private async void LoadData()
@@ -57,15 +70,14 @@ namespace SanrooLK.Views.AdminOperations.Views
                 });
             }
 
-            CustomerCount = Customers.Count;
-            OnPropertyChanged("CustomerCount");
+            CustomerCount = await LoadCustomerCount.GetCustomerCount(); // Update CustomerCount
         }
 
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(string propertyName)
         {
-            PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         private void txt_customerID_GotFocus(object sender, RoutedEventArgs e)
@@ -137,7 +149,7 @@ namespace SanrooLK.Views.AdminOperations.Views
                 MessageBox.Show("Please Enter Valid Customer ID or NIC", "", MessageBoxButton.OK, MessageBoxImage.Information);
                 return; // Exit the method if the input is invalid
             }
-            else if (searchText == "Enter Customer ID or NIC to View Details")
+            else if (searchText == "Enter Customer ID or Contact to View Details")
             {
                 MessageBox.Show("Please Enter Valid Customer ID or NIC", "", MessageBoxButton.OK, MessageBoxImage.Information);
                 return; // Exit the method if the input is invalid

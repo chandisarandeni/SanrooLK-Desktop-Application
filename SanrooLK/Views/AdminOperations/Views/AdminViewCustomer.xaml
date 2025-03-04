@@ -68,22 +68,23 @@
 
                             <!--Total Employee Count-->
                             <Viewbox Stretch="Uniform"
-                                     Grid.Column="1"
-                                     Grid.Row="1">
-                                <Label Content="Total Employee Count:"
-                                       FontFamily="Lucida Fax"
-                                       FontWeight="Bold"
-                                       HorizontalAlignment="Left"/>
+         Grid.Column="1"
+         Grid.Row="1">
+                                <Label Content="Total Customer Count:"
+           FontFamily="Lucida Fax"
+           FontWeight="Bold"
+           HorizontalAlignment="Left"/>
                             </Viewbox>
                             <Viewbox Stretch="Uniform"
-                                     Grid.Column="2"
-                                     Grid.Row="1">
+         Grid.Column="2"
+         Grid.Row="1">
                                 <Label Name="lbl_totalCustomerCount"
-                                       Content="{Binding CustomerCount}"
-                                       FontFamily="Lucida Fax"
-                                       FontWeight="Bold"
-                                       HorizontalAlignment="Left"/>
+           Content="{Binding CustomerCount, Mode=OneWay}"
+           FontFamily="Lucida Fax"
+           FontWeight="Bold"
+           HorizontalAlignment="Left"/>
                             </Viewbox>
+
 
 
                             <!--Customer Search Text Block-->

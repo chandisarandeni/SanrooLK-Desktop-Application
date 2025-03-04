@@ -538,11 +538,12 @@
                                     <StackPanel>
                                         <!-- Column Headers -->
                                         <StackPanel Orientation="Horizontal" Margin="5" Width="839">
-                                            <TextBlock Text="Inquiry ID" Width="120" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4" Foreground="#333333"/>
-                                            <TextBlock Text="Description" Width="200" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4" Foreground="#333333"/>
-                                            <TextBlock Text="Date" Width="150" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4" Foreground="#333333"/>
-                                            <TextBlock Text="Status" Width="120" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4" Foreground="#333333"/>
-                                            <TextBlock Text="Customer ID" Width="120" FontWeight="Bold" FontFamily="Lucida Fax" FontSize="14" Margin="4" Foreground="#333333"/>
+                                            <TextBlock Text="Inquiry ID" Width="120" FontWeight="Bold" FontSize="14" Margin="4" Foreground="#333"/>
+                                            <TextBlock Text="Description" Width="200" FontWeight="Bold" FontSize="14" Margin="4" Foreground="#333"/>
+                                            <TextBlock Text="Date" Width="150" FontWeight="Bold" FontSize="14" Margin="4" Foreground="#333"/>
+                                            <TextBlock Text="Status" Width="120" FontWeight="Bold" FontSize="14" Margin="4" Foreground="#333"/>
+                                            <TextBlock Text="Customer ID" Width="120" FontWeight="Bold" FontSize="14" Margin="4" Foreground="#333"/>
+                                            <TextBlock Text="Actions" Width="100" FontWeight="Bold" FontSize="14" Margin="4" Foreground="#333"/>
                                         </StackPanel>
 
                                         <!-- Scrollable Content -->
@@ -551,13 +552,17 @@
                                                 <ItemsControl Name="InquiryTable" ItemsSource="{Binding Inquiries}">
                                                     <ItemsControl.ItemTemplate>
                                                         <DataTemplate>
-                                                            <Border Background="#FFFFFF" Margin="2" CornerRadius="3" BorderBrush="#D0D0D0" BorderThickness="1">
+                                                            <Border Background="White" Margin="2" CornerRadius="3" BorderBrush="#D0D0D0" BorderThickness="1">
                                                                 <StackPanel Orientation="Horizontal">
-                                                                    <TextBlock Text="{Binding InquiryID}" Width="120" FontFamily="Lucida Fax" Margin="4" VerticalAlignment="Center"/>
-                                                                    <TextBlock Text="{Binding InquiryDescription}" Width="200" FontFamily="Lucida Fax" Margin="4" VerticalAlignment="Center"/>
-                                                                    <TextBlock Text="{Binding InquiryDate, StringFormat=d}" Width="150" FontFamily="Lucida Fax" Margin="4" VerticalAlignment="Center"/>
-                                                                    <TextBlock Text="{Binding InquiryStatus}" Width="120" FontFamily="Lucida Fax" Margin="4" VerticalAlignment="Center"/>
-                                                                    <TextBlock Text="{Binding CustomerID}" Width="120" FontFamily="Lucida Fax" Margin="4" VerticalAlignment="Center"/>
+                                                                    <TextBlock Text="{Binding InquiryID}" Width="120" Margin="4" VerticalAlignment="Center"/>
+                                                                    <TextBlock Text="{Binding InquiryDescription}" Width="200" Margin="4" VerticalAlignment="Center"/>
+                                                                    <TextBlock Text="{Binding InquiryDate, StringFormat=d}" Width="150" Margin="4" VerticalAlignment="Center"/>
+                                                                    <TextBlock Text="{Binding InquiryStatus}" Width="120" Margin="4" VerticalAlignment="Center"/>
+                                                                    <TextBlock Text="{Binding CustomerID}" Width="120" Margin="4" VerticalAlignment="Center"/>
+
+                                                                    <!-- View Button -->
+                                                                    <Button Content="View" Width="80" Margin="4" Foreground="Black"
+                                                                        Click="ViewButton_Click"/>
                                                                 </StackPanel>
                                                             </Border>
                                                         </DataTemplate>
@@ -568,9 +573,9 @@
                                     </StackPanel>
                                 </Border>
                             </Viewbox>
-                            
-                            
-                            
+
+
+
                         </Grid>
                         <!--Sub Area End-->
 

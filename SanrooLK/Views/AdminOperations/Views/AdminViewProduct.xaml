@@ -93,6 +93,7 @@
 
 
                             <!--Total Available Product Count-->
+                            <!--
                             <Viewbox Stretch="Uniform"
                                      Grid.Column="5"
                                      Grid.Row="1"
@@ -111,6 +112,7 @@
                                        FontWeight="Bold"
                                        FontSize="20"/>
                             </Viewbox>
+                            -->
 
 
                             <!--Product Count Text Block-->
