@@ -517,6 +517,7 @@
             <Viewbox Grid.Column="5"
                      Grid.Row="14" Margin="0,0,-60,0">
                 <Border Name="btn_saveEmployee"
+                        MouseDown="btn_saveEmployee_Click"
                         Background="Black"
                         BorderBrush="Black"
                         BorderThickness="0"
