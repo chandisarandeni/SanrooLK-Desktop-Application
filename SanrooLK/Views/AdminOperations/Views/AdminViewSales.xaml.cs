@@ -1,31 +1,58 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using SanrooLK.Views.AdminOperations.Controllers; // Correct namespace for LoadInquiries
+using SanrooLK.Views.AdminOperations.Models; // Correct namespace for Inquiry
 
 namespace SanrooLK.Views.AdminOperations.Views
 {
-    /// <summary>
-    /// Interaction logic for AdminViewSales.xaml
-    /// </summary>
     public partial class AdminViewSales : UserControl
     {
+        // Use Models.Inquiry explicitly to avoid ambiguity
+        public ObservableCollection<SanrooLK.Views.AdminOperations.Models.Inquiry> Inquiries { get; set; } = new ObservableCollection<SanrooLK.Views.AdminOperations.Models.Inquiry>();
+
         public AdminViewSales()
         {
             InitializeComponent();
+            this.DataContext = this;  // Ensure data context is set for binding
+            LoadInquiriesData();  // Load data when UserControl is initialized
+        }
+
+        private async void LoadInquiriesData()
+        {
+            try
+            {
+                var inquiries = await LoadInquiries.GetInquiriesAsync();
+
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    Inquiries.Clear();
+                    foreach (var inquiry in inquiries)
+                    {
+                        Inquiries.Add(inquiry);
+                    }
+                    Debug.WriteLine($"Total Inquiries Loaded: {Inquiries.Count}");
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading inquiries: " + ex.Message);
+            }
         }
 
 
+        // Refresh button click event to reload data
+        private void RefreshButton_Click(object sender, RoutedEventArgs e)
+        {
+            LoadInquiriesData();  // Refresh data when button is clicked
+        }
+
+        // Textbox events for Product ID with placeholder functionality
         private void txt_productID_GotFocus(object sender, RoutedEventArgs e)
         {
             if (txt_productID.Text == "Enter Product ID to View Details")
@@ -35,7 +62,7 @@ namespace SanrooLK.Views.AdminOperations.Views
             }
         }
 
-        private void txt_productID_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        private void txt_productID_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             if (txt_productID.Text == "Enter Product ID to View Details")
             {
@@ -48,11 +75,12 @@ namespace SanrooLK.Views.AdminOperations.Views
         {
             if (string.IsNullOrWhiteSpace(txt_productID.Text))
             {
-                txt_productID.Text = "Enter Employee ID or NIC to View Details";
+                txt_productID.Text = "Enter Product ID to View Details";
                 txt_productID.Foreground = Brushes.Gray;
             }
         }
 
+        // Event to handle mouse click for selecting options in popups
         private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (sender == SelectedOption)
@@ -69,6 +97,7 @@ namespace SanrooLK.Views.AdminOperations.Views
             }
         }
 
+        // Option button click event to set selected options
         private void OptionButton_Click(object sender, RoutedEventArgs e)
         {
             var button = sender as Button;
@@ -89,11 +118,6 @@ namespace SanrooLK.Views.AdminOperations.Views
                 SelectedOptionStockStatus.Text = button.Content.ToString();
                 OptionPopupStockStatus.IsOpen = false;
             }
-        }
-
-        private void MenuBarSales_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
