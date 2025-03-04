@@ -12,19 +12,33 @@ using System.Windows.Media;
 
 namespace SanrooLK.Views.AdminOperations.Views
 {
-    public partial class AdminViewProduct : UserControl
+    public partial class AdminViewProduct : UserControl, System.ComponentModel.INotifyPropertyChanged
     {
         private static string connectionString = "mongodb+srv://DesktopClient:6uJegLlg5cjVy5GS@sanroolk.xxwnk.mongodb.net/?retryWrites=true&w=majority&appName=SanrooLK";
         private static string databaseName = "SanrooLKDB";
         private static string collectionName = "Product";
         private IMongoCollection<BsonDocument> collection;
 
+        private int _productCount;
+
         public ObservableCollection<Product> Products { get; set; }
-        public int ProductCount { get; set; }
 
         private string selectedCategory;
         private string selectedBrand;
         private string selectedStockStatus;
+
+        public int ProductCount
+        {
+            get { return _productCount; }
+            set
+            {
+                if (_productCount != value)
+                {
+                    _productCount = value;
+                    OnPropertyChanged(nameof(ProductCount));
+                }
+            }
+        }
 
         public AdminViewProduct()
         {
@@ -46,7 +60,7 @@ namespace SanrooLK.Views.AdminOperations.Views
             collection = database.GetCollection<BsonDocument>(collectionName);
 
             LoadData();
-            DataContext = this;
+            DataContext = this; // Bind to the current instance
         }
 
         private async void LoadData()
@@ -95,8 +109,8 @@ namespace SanrooLK.Views.AdminOperations.Views
                 });
             }
 
-            ProductCount = Products.Count;
-            OnPropertyChanged("ProductCount");
+            ProductCount = Products.Count;  // Update the product count
+            OnPropertyChanged("ProductCount");  // Notify that the product count has changed
         }
 
         private void txt_productID_GotFocus(object sender, RoutedEventArgs e)
@@ -210,6 +224,7 @@ namespace SanrooLK.Views.AdminOperations.Views
         {
             PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
         }
+
         private void btn_Search_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             LoadData(); // Trigger search based on entered text

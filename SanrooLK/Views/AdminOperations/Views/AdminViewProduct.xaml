@@ -71,24 +71,25 @@
 
                             <!--Total Product Count-->
                             <Viewbox Stretch="Uniform"
-                                     Grid.Column="1"
-                                     Grid.Row="1">
+         Grid.Column="1"
+         Grid.Row="1">
                                 <Label Content="Total Product Count: "
-                                       FontFamily="Lucida Fax"
-                                       FontSize="20"
-                                       FontWeight="Bold"/>
+           FontFamily="Lucida Fax"
+           FontSize="20"
+           FontWeight="Bold"/>
                             </Viewbox>
+
                             <Viewbox Stretch="Uniform"
-                                     Grid.Column="2"
-                                     Grid.Row="1" 
-                                     Margin="0,0,196,0"
-                                     Grid.ColumnSpan="2">
+         Grid.Column="2"
+         Grid.Row="1" 
+         Margin="0,0,196,0"
+         Grid.ColumnSpan="2">
                                 <Label Name="lbl_totalProductCount"
-                                       Content="100"
-                                       FontFamily="Lucida Fax"
-                                       FontSize="20"
-                                       FontWeight="Bold"
-                                       HorizontalAlignment="Left" Width="80"/>
+           Content="{Binding ProductCount}"
+           FontFamily="Lucida Fax"
+           FontSize="20"
+           FontWeight="Bold"
+           HorizontalAlignment="Left" Width="80"/>
                             </Viewbox>
 
 
