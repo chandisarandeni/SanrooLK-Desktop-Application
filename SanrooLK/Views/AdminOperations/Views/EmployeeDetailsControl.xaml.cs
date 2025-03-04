@@ -77,5 +77,56 @@ namespace SanrooLK.Views.AdminOperations.Views
             }
         }
 
+
+        private void btn_deleteEmployee_PreviewMouseDown(object sender, RoutedEventArgs e)
+        {
+            // Confirm deletion
+            var result = MessageBox.Show("Are you sure you want to delete this employee?", "Confirm Deletion", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                // Get the EmployeeID from the bound Employee object
+                string employeeID = Employee.EmployeeID;
+
+                // Delete employee from MongoDB
+                DeleteEmployee(employeeID);
+            }
+        }
+
+        private void DeleteEmployee(string employeeID)
+        {
+            try
+            {
+                // MongoDB client and database setup
+                var client = new MongoClient("mongodb+srv://DesktopClient:6uJegLlg5cjVy5GS@sanroolk.xxwnk.mongodb.net/?retryWrites=true&w=majority&appName=SanrooLK");
+                var database = client.GetDatabase("SanrooLKDB");
+                var collection = database.GetCollection<Employee>("Employee");
+
+                // Find the employee document by employeeID
+                var filter = Builders<Employee>.Filter.Eq(e => e.EmployeeID, employeeID);
+
+                // Delete the employee document
+                var result = collection.DeleteOne(filter);
+
+                if (result.DeletedCount > 0)
+                {
+                    MessageBox.Show("Employee deleted successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Console.WriteLine("Employee deleted successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Employee not found or no deletion needed.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Console.WriteLine("Employee not found or no deletion needed.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Catch any exceptions and show a detailed error message
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+
+
     }
 }

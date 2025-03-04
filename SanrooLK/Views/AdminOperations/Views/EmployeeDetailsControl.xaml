@@ -430,6 +430,7 @@
             <Viewbox Grid.Column="5"
                      Grid.Row="6" Margin="0,0,-60,0">
                 <Border Name="btn_deleteEmployee"
+                        PreviewMouseDown="btn_deleteEmployee_PreviewMouseDown"
                         Background="Black"
                         BorderBrush="Black"
                         BorderThickness="0"
