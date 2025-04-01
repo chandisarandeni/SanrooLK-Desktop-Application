@@ -1,3 +1,10 @@
+## UI Design
+  <div style="display: flex; justify-content: space-around;">
+  <img src="https://github.com/user-attachments/assets/82f2f4eb-e8eb-4719-a87c-b30f1ebda830" width="45%" />
+  <img src="https://github.com/user-attachments/assets/d756ecbc-c8b4-4c98-a74e-2914c88ebe50" width="45%" />
+</div>
+
+
 ## Database Details
 
 ### Database Name: ```SanrooLKDB```
